@@ -10,21 +10,16 @@ using System.Windows.Forms;
 
 namespace Kelompok_D
 {
-    public partial class User_Page : Form
+    public partial class AdminPage : Form
     {
-        public User_Page()
+        public AdminPage()
         {
             InitializeComponent();
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private void label6_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void btnLogin_Click(object sender, EventArgs e)
-        {
-            
         }
     }
 }

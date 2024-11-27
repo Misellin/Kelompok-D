@@ -3,12 +3,24 @@
   "WorkspaceRootPath": "D:\\UPH\\Project semester 4\\Kelompok D\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DF2B433A-87B1-421B-86A0-D498A7ED752C}|Kelompok D\\Kelompok D.csproj|D:\\UPH\\Project semester 4\\Kelompok D\\kelompok d\\user_page.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DF2B433A-87B1-421B-86A0-D498A7ED752C}|Kelompok D\\Kelompok D.csproj|solutionrelative:kelompok d\\user_page.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DF2B433A-87B1-421B-86A0-D498A7ED752C}|Kelompok D\\Kelompok D.csproj|d:\\uph\\project semester 4\\kelompok d\\kelompok d\\adminpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DF2B433A-87B1-421B-86A0-D498A7ED752C}|Kelompok D\\Kelompok D.csproj|solutionrelative:kelompok d\\adminpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DF2B433A-87B1-421B-86A0-D498A7ED752C}|Kelompok D\\Kelompok D.csproj|d:\\uph\\project semester 4\\kelompok d\\kelompok d\\user_page.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{DF2B433A-87B1-421B-86A0-D498A7ED752C}|Kelompok D\\Kelompok D.csproj|solutionrelative:kelompok d\\user_page.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{DF2B433A-87B1-421B-86A0-D498A7ED752C}|Kelompok D\\Kelompok D.csproj|d:\\uph\\project semester 4\\kelompok d\\kelompok d\\adminpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF2B433A-87B1-421B-86A0-D498A7ED752C}|Kelompok D\\Kelompok D.csproj|solutionrelative:kelompok d\\adminpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF2B433A-87B1-421B-86A0-D498A7ED752C}|Kelompok D\\Kelompok D.csproj|D:\\UPH\\Project semester 4\\Kelompok D\\kelompok d\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DF2B433A-87B1-421B-86A0-D498A7ED752C}|Kelompok D\\Kelompok D.csproj|solutionrelative:kelompok d\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF2B433A-87B1-421B-86A0-D498A7ED752C}|Kelompok D\\Kelompok D.csproj|d:\\uph\\project semester 4\\kelompok d\\kelompok d\\userpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DF2B433A-87B1-421B-86A0-D498A7ED752C}|Kelompok D\\Kelompok D.csproj|solutionrelative:kelompok d\\userpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF2B433A-87B1-421B-86A0-D498A7ED752C}|Kelompok D\\Kelompok D.csproj|d:\\uph\\project semester 4\\kelompok d\\kelompok d\\userpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF2B433A-87B1-421B-86A0-D498A7ED752C}|Kelompok D\\Kelompok D.csproj|solutionrelative:kelompok d\\userpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DF2B433A-87B1-421B-86A0-D498A7ED752C}|Kelompok D\\Kelompok D.csproj|D:\\UPH\\Project semester 4\\Kelompok D\\kelompok d\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -22,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,40 +46,78 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "User_Page.cs",
-              "DocumentMoniker": "D:\\UPH\\Project semester 4\\Kelompok D\\Kelompok D\\User_Page.cs",
-              "RelativeDocumentMoniker": "Kelompok D\\User_Page.cs",
-              "ToolTip": "D:\\UPH\\Project semester 4\\Kelompok D\\Kelompok D\\User_Page.cs",
-              "RelativeToolTip": "Kelompok D\\User_Page.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAtwB4AAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "AdminPage.cs",
+              "DocumentMoniker": "D:\\UPH\\Project semester 4\\Kelompok D\\Kelompok D\\AdminPage.cs",
+              "RelativeDocumentMoniker": "Kelompok D\\AdminPage.cs",
+              "ToolTip": "D:\\UPH\\Project semester 4\\Kelompok D\\Kelompok D\\AdminPage.cs",
+              "RelativeToolTip": "Kelompok D\\AdminPage.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAApwBUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-24T10:48:45.272Z",
+              "WhenOpened": "2024-11-27T15:04:43.086Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "User_Page.cs [Design]",
-              "DocumentMoniker": "D:\\UPH\\Project semester 4\\Kelompok D\\Kelompok D\\User_Page.cs",
-              "RelativeDocumentMoniker": "Kelompok D\\User_Page.cs",
-              "ToolTip": "D:\\UPH\\Project semester 4\\Kelompok D\\Kelompok D\\User_Page.cs [Design]",
-              "RelativeToolTip": "Kelompok D\\User_Page.cs [Design]",
+              "DocumentIndex": 0,
+              "Title": "AdminPage.cs [Design]",
+              "DocumentMoniker": "D:\\UPH\\Project semester 4\\Kelompok D\\Kelompok D\\AdminPage.cs",
+              "RelativeDocumentMoniker": "Kelompok D\\AdminPage.cs",
+              "ToolTip": "D:\\UPH\\Project semester 4\\Kelompok D\\Kelompok D\\AdminPage.cs [Design]",
+              "RelativeToolTip": "Kelompok D\\AdminPage.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-24T10:48:19.791Z",
+              "WhenOpened": "2024-11-27T15:02:16.632Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UserPage.cs",
+              "DocumentMoniker": "D:\\UPH\\Project semester 4\\Kelompok D\\Kelompok D\\UserPage.cs",
+              "RelativeDocumentMoniker": "Kelompok D\\UserPage.cs",
+              "ToolTip": "D:\\UPH\\Project semester 4\\Kelompok D\\Kelompok D\\UserPage.cs",
+              "RelativeToolTip": "Kelompok D\\UserPage.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAtwBoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-27T14:57:48.693Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UserPage.cs [Design]",
+              "DocumentMoniker": "D:\\UPH\\Project semester 4\\Kelompok D\\Kelompok D\\UserPage.cs",
+              "RelativeDocumentMoniker": "Kelompok D\\UserPage.cs",
+              "ToolTip": "D:\\UPH\\Project semester 4\\Kelompok D\\Kelompok D\\UserPage.cs [Design]",
+              "RelativeToolTip": "Kelompok D\\UserPage.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-27T14:55:10.658Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "Home.cs [Design]",
+              "DocumentMoniker": "D:\\UPH\\Project semester 4\\Kelompok D\\Kelompok D\\Home.cs",
+              "RelativeDocumentMoniker": "Kelompok D\\Home.cs",
+              "ToolTip": "D:\\UPH\\Project semester 4\\Kelompok D\\Kelompok D\\Home.cs [Design]",
+              "RelativeToolTip": "Kelompok D\\Home.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-27T12:22:14.446Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\UPH\\Project semester 4\\Kelompok D\\Kelompok D\\Program.cs",
               "RelativeDocumentMoniker": "Kelompok D\\Program.cs",
               "ToolTip": "D:\\UPH\\Project semester 4\\Kelompok D\\Kelompok D\\Program.cs",
               "RelativeToolTip": "Kelompok D\\Program.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABEAAABBAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABMAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-24T10:47:13.487Z"
+              "WhenOpened": "2024-11-24T10:47:13.487Z",
+              "EditorCaption": ""
             }
           ]
         }

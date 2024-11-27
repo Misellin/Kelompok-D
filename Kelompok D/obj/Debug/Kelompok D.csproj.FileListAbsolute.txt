@@ -8,3 +8,5 @@ D:\UPH\Project semester 4\Kelompok D\Kelompok D\obj\Debug\Kelompok D.csproj.Gene
 D:\UPH\Project semester 4\Kelompok D\Kelompok D\obj\Debug\Kelompok D.csproj.CoreCompileInputs.cache
 D:\UPH\Project semester 4\Kelompok D\Kelompok D\obj\Debug\Kelompok D.exe
 D:\UPH\Project semester 4\Kelompok D\Kelompok D\obj\Debug\Kelompok D.pdb
+D:\UPH\Project semester 4\Kelompok D\Kelompok D\obj\Debug\Kelompok_D.Admin_Page.resources
+D:\UPH\Project semester 4\Kelompok D\Kelompok D\obj\Debug\Kelompok_D.Home.resources
