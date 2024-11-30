@@ -17,7 +17,12 @@ namespace Kelompok_D
             InitializeComponent();
         }
 
-        private void label6_Click(object sender, EventArgs e)
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btnTambah_Click(object sender, EventArgs e)
         {
 
         }
