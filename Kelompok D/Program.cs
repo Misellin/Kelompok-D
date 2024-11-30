@@ -18,6 +18,7 @@ namespace Kelompok_D
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new User_Page());
             Application.Run(new Home());
+            Application.Run(new ExamPage());
         }
     }
 }

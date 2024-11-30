@@ -3,10 +3,13 @@ D:\UPH\Project semester 4\Kelompok D\Kelompok D\bin\Debug\Kelompok D.exe
 D:\UPH\Project semester 4\Kelompok D\Kelompok D\bin\Debug\Kelompok D.pdb
 D:\UPH\Project semester 4\Kelompok D\Kelompok D\obj\Debug\Kelompok D.csproj.AssemblyReference.cache
 D:\UPH\Project semester 4\Kelompok D\Kelompok D\obj\Debug\Kelompok_D.Properties.Resources.resources
-D:\UPH\Project semester 4\Kelompok D\Kelompok D\obj\Debug\Kelompok_D.User_Page.resources
 D:\UPH\Project semester 4\Kelompok D\Kelompok D\obj\Debug\Kelompok D.csproj.GenerateResource.cache
 D:\UPH\Project semester 4\Kelompok D\Kelompok D\obj\Debug\Kelompok D.csproj.CoreCompileInputs.cache
 D:\UPH\Project semester 4\Kelompok D\Kelompok D\obj\Debug\Kelompok D.exe
 D:\UPH\Project semester 4\Kelompok D\Kelompok D\obj\Debug\Kelompok D.pdb
-D:\UPH\Project semester 4\Kelompok D\Kelompok D\obj\Debug\Kelompok_D.Admin_Page.resources
 D:\UPH\Project semester 4\Kelompok D\Kelompok D\obj\Debug\Kelompok_D.Home.resources
+D:\UPH\Project semester 4\Kelompok D\Kelompok D\obj\Debug\Kelompok_D.AdminPage.resources
+D:\UPH\Project semester 4\Kelompok D\Kelompok D\obj\Debug\Kelompok_D.ExamPage.resources
+D:\UPH\Project semester 4\Kelompok D\Kelompok D\obj\Debug\Kelompok_D.KonfirmasiPage.resources
+D:\UPH\Project semester 4\Kelompok D\Kelompok D\obj\Debug\Kelompok_D.ParInformationPage.resources
+D:\UPH\Project semester 4\Kelompok D\Kelompok D\obj\Debug\Kelompok_D.UserPage.resources
