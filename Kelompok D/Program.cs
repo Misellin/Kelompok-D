@@ -16,8 +16,9 @@ namespace Kelompok_D
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            //Application.Run(new User_Page());
             Application.Run(new Home());
-            //Application.Run(new teslayout());
+            Application.Run(new ExamPage());
         }
     }
 }
