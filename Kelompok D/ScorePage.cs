@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace Kelompok_D
 {
-    public partial class ParInformationPage : Form
+    public partial class ScorePage : Form
     {
-        public ParInformationPage()
+        public ScorePage()
         {
             InitializeComponent();
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }

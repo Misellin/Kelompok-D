@@ -3,12 +3,10 @@ D:\UPH\Project semester 4\Kelompok D\Kelompok D\bin\Debug\Kelompok D.exe
 D:\UPH\Project semester 4\Kelompok D\Kelompok D\bin\Debug\Kelompok D.pdb
 D:\UPH\Project semester 4\Kelompok D\Kelompok D\obj\Debug\Kelompok D.csproj.AssemblyReference.cache
 D:\UPH\Project semester 4\Kelompok D\Kelompok D\obj\Debug\Kelompok_D.Properties.Resources.resources
-D:\UPH\Project semester 4\Kelompok D\Kelompok D\obj\Debug\Kelompok_D.User_Page.resources
 D:\UPH\Project semester 4\Kelompok D\Kelompok D\obj\Debug\Kelompok D.csproj.GenerateResource.cache
 D:\UPH\Project semester 4\Kelompok D\Kelompok D\obj\Debug\Kelompok D.csproj.CoreCompileInputs.cache
 D:\UPH\Project semester 4\Kelompok D\Kelompok D\obj\Debug\Kelompok D.exe
 D:\UPH\Project semester 4\Kelompok D\Kelompok D\obj\Debug\Kelompok D.pdb
-D:\UPH\Project semester 4\Kelompok D\Kelompok D\obj\Debug\Kelompok_D.Admin_Page.resources
 D:\UPH\Project semester 4\Kelompok D\Kelompok D\obj\Debug\Kelompok_D.Home.resources
 C:\Users\Lenovo\Desktop\New folder\Kelompok-D\Kelompok D\bin\Debug\Kelompok D.exe.config
 C:\Users\Lenovo\Desktop\New folder\Kelompok-D\Kelompok D\bin\Debug\Kelompok D.exe
@@ -38,3 +36,22 @@ C:\Users\Lenovo\Desktop\New folder\Kelompok-D\Kelompok D\obj\Debug\Kelompok_D.Ex
 C:\Users\Lenovo\Desktop\New folder\Kelompok-D\Kelompok D\obj\Debug\Kelompok_D.FinishedForm.resources
 C:\Users\Lenovo\Desktop\New folder\Kelompok-D\Kelompok D\obj\Debug\Kelompok_D.KonfirmasiPage.resources
 C:\Users\Lenovo\Desktop\New folder\Kelompok-D\Kelompok D\obj\Debug\Kelompok_D.ParInformationPage.resources
+D:\UPH\Project semester 4\Kelompok D\Kelompok D\bin\Debug\Dapper.dll
+D:\UPH\Project semester 4\Kelompok D\Kelompok D\bin\Debug\EntityFramework.dll
+D:\UPH\Project semester 4\Kelompok D\Kelompok D\bin\Debug\EntityFramework.SqlServer.dll
+D:\UPH\Project semester 4\Kelompok D\Kelompok D\bin\Debug\System.Data.SQLite.dll
+D:\UPH\Project semester 4\Kelompok D\Kelompok D\bin\Debug\System.Data.SQLite.EF6.dll
+D:\UPH\Project semester 4\Kelompok D\Kelompok D\bin\Debug\System.Data.SQLite.Linq.dll
+D:\UPH\Project semester 4\Kelompok D\Kelompok D\bin\Debug\Dapper.xml
+D:\UPH\Project semester 4\Kelompok D\Kelompok D\bin\Debug\EntityFramework.xml
+D:\UPH\Project semester 4\Kelompok D\Kelompok D\bin\Debug\EntityFramework.SqlServer.xml
+D:\UPH\Project semester 4\Kelompok D\Kelompok D\bin\Debug\System.Data.SQLite.xml
+D:\UPH\Project semester 4\Kelompok D\Kelompok D\obj\Debug\Kelompok_D.AdminPage.resources
+D:\UPH\Project semester 4\Kelompok D\Kelompok D\obj\Debug\Kelompok_D.ExamPage.resources
+D:\UPH\Project semester 4\Kelompok D\Kelompok D\obj\Debug\Kelompok_D.FinishedForm.resources
+D:\UPH\Project semester 4\Kelompok D\Kelompok D\obj\Debug\Kelompok_D.KonfirmasiPage.resources
+D:\UPH\Project semester 4\Kelompok D\Kelompok D\obj\Debug\Kelompok_D.ParInformationPage.resources
+D:\UPH\Project semester 4\Kelompok D\Kelompok D\obj\Debug\Kelompok_D.teslayout.resources
+D:\UPH\Project semester 4\Kelompok D\Kelompok D\obj\Debug\Kelompok_D.UserPage.resources
+D:\UPH\Project semester 4\Kelompok D\Kelompok D\obj\Debug\Kelompok D.csproj.Up2Date
+D:\UPH\Project semester 4\Kelompok D\Kelompok D\obj\Debug\Kelompok_D.ScorePage.resources

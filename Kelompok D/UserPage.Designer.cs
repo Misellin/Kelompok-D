@@ -35,7 +35,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -49,7 +48,6 @@
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel8.SuspendLayout();
@@ -136,23 +134,12 @@
             this.label1.Text = "Online Exam System";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // panel5
-            // 
-            this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel5.Controls.Add(this.label5);
-            this.panel5.Location = new System.Drawing.Point(218, 109);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(716, 40);
-            this.panel5.TabIndex = 19;
-            // 
             // label5
             // 
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(3, 7);
+            this.label5.Location = new System.Drawing.Point(275, 13);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(106, 25);
+            this.label5.Size = new System.Drawing.Size(67, 25);
             this.label5.TabIndex = 10;
             this.label5.Text = "Login";
             // 
@@ -162,6 +149,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel6.Controls.Add(this.label5);
             this.panel6.Controls.Add(this.panel7);
             this.panel6.Controls.Add(this.btnLogin);
             this.panel6.Controls.Add(this.cbShowPass);
@@ -169,9 +157,9 @@
             this.panel6.Controls.Add(this.label7);
             this.panel6.Controls.Add(this.label8);
             this.panel6.Controls.Add(this.panel8);
-            this.panel6.Location = new System.Drawing.Point(218, 155);
+            this.panel6.Location = new System.Drawing.Point(270, 169);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(717, 344);
+            this.panel6.Size = new System.Drawing.Size(620, 253);
             this.panel6.TabIndex = 18;
             // 
             // panel7
@@ -179,7 +167,7 @@
             this.panel7.BackColor = System.Drawing.Color.White;
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel7.Controls.Add(this.txtNIM);
-            this.panel7.Location = new System.Drawing.Point(176, 90);
+            this.panel7.Location = new System.Drawing.Point(126, 75);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(472, 34);
             this.panel7.TabIndex = 18;
@@ -198,7 +186,7 @@
             // btnLogin
             // 
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.Location = new System.Drawing.Point(309, 213);
+            this.btnLogin.Location = new System.Drawing.Point(259, 198);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(138, 41);
             this.btnLogin.TabIndex = 17;
@@ -208,7 +196,7 @@
             // cbShowPass
             // 
             this.cbShowPass.AutoSize = true;
-            this.cbShowPass.Location = new System.Drawing.Point(176, 181);
+            this.cbShowPass.Location = new System.Drawing.Point(126, 166);
             this.cbShowPass.Name = "cbShowPass";
             this.cbShowPass.Size = new System.Drawing.Size(125, 20);
             this.cbShowPass.TabIndex = 16;
@@ -218,7 +206,7 @@
             // label6
             // 
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(66, 140);
+            this.label6.Location = new System.Drawing.Point(16, 125);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(104, 29);
             this.label6.TabIndex = 13;
@@ -227,7 +215,7 @@
             // label7
             // 
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(115, 94);
+            this.label7.Location = new System.Drawing.Point(65, 79);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(55, 29);
             this.label7.TabIndex = 12;
@@ -236,7 +224,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(244, 181);
+            this.label8.Location = new System.Drawing.Point(194, 166);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(0, 16);
             this.label8.TabIndex = 11;
@@ -246,7 +234,7 @@
             this.panel8.BackColor = System.Drawing.Color.White;
             this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel8.Controls.Add(this.txtPassword);
-            this.panel8.Location = new System.Drawing.Point(176, 139);
+            this.panel8.Location = new System.Drawing.Point(126, 124);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(472, 34);
             this.panel8.TabIndex = 19;
@@ -266,7 +254,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(946, 509);
-            this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -277,7 +264,6 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.panel7.ResumeLayout(false);
@@ -296,7 +282,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel7;
