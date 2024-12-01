@@ -95,30 +95,33 @@
                     cbAns2.Visible = false;
                     cbAns3.Visible = false;
                     cbAns4.Visible = false;
+                    Random rnd = new Random();
+                    pilihan = pilihan.OrderBy(x => rnd.Next()).ToArray();
 
                     // Tampilkan pilihan jawaban
                     for (int i = 0; i < pilihan.Length; i++)
                     {
                         pilihan[i] = pilihan[i].Trim();
+
                         switch (i)
-                        {
-                            case 0:
-                                cbAns1.Text = pilihan[i];
-                                cbAns1.Visible = true;
-                                break;
-                            case 1:
-                                cbAns2.Text = pilihan[i];
-                                cbAns2.Visible = true;
-                                break;
-                            case 2:
-                                cbAns3.Text = pilihan[i];
-                                cbAns3.Visible = true;
-                                break;
-                            case 3:
-                                cbAns4.Text = pilihan[i];
-                                cbAns4.Visible = true;
-                                break;
-                        }
+                            {
+                                case 0:
+                                    cbAns1.Text = pilihan[i];
+                                    cbAns1.Visible = true;
+                                    break;
+                                case 1:
+                                    cbAns2.Text = pilihan[i];
+                                    cbAns2.Visible = true;
+                                    break;
+                                case 2:
+                                    cbAns3.Text = pilihan[i];
+                                    cbAns3.Visible = true;
+                                    break;
+                                case 3:
+                                    cbAns4.Text = pilihan[i];
+                                    cbAns4.Visible = true;
+                                    break;
+                            }
                     }
 
                     lblSoalCount.Text = $"Question {currentSoalIndex + 1}";
@@ -142,8 +145,6 @@
                             }
                         }
                     }
-
-
                 }
             }
 

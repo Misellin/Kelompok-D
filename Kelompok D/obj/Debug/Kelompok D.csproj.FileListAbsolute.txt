@@ -55,3 +55,4 @@ D:\UPH\Project semester 4\Kelompok D\Kelompok D\obj\Debug\Kelompok_D.teslayout.r
 D:\UPH\Project semester 4\Kelompok D\Kelompok D\obj\Debug\Kelompok_D.UserPage.resources
 D:\UPH\Project semester 4\Kelompok D\Kelompok D\obj\Debug\Kelompok D.csproj.Up2Date
 D:\UPH\Project semester 4\Kelompok D\Kelompok D\obj\Debug\Kelompok_D.ScorePage.resources
+C:\Users\Lenovo\Desktop\New folder\Kelompok-D\Kelompok D\obj\Debug\Kelompok_D.ScorePage.resources
