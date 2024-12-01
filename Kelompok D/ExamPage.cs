@@ -1,313 +1,371 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using Dapper;
-using System.Data.SQLite;
+﻿    using System;
+    using System.Collections.Generic;
+    using System.ComponentModel;
+    using System.Data;
+    using System.Drawing;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
+    using System.Windows.Forms;
+    using Dapper;
+    using System.Data.SQLite;
 
-namespace Kelompok_D
-{
-    public partial class ExamPage : Form
+    namespace Kelompok_D
     {
-        private List<sooal> daftarSoal;
-        private int currentSoalIndex;
-        private Timer examTimer;
-        private int timeLeft;
-        private List<string> jawabanUser; // List untuk menyimpan jawaban user
-        private List<bool> soalDiragukan; // List untuk menyimpan status "doubt"
-        private Button[] buttons;
-
-        public ExamPage()
+        public partial class ExamPage : Form
         {
-            InitializeComponent();
-            LoadSoal();
-            currentSoalIndex = 0;
-            timeLeft = 60 * 60; // 60 menit
+            private List<sooal> daftarSoal;
+            private int currentSoalIndex;
+            private Timer examTimer;
+            private int timeLeft;
+            private List<string> jawabanUser; // List untuk menyimpan jawaban user
+            private List<bool> soalDiragukan; // List untuk menyimpan status "doubt"
+            private Button[] buttons;
 
-            jawabanUser = new List<string>();
-            soalDiragukan = new List<bool>();
-            for (int i = 0; i < daftarSoal.Count; i++)
+            public ExamPage()
             {
-                jawabanUser.Add(""); // Isi dengan string kosong
-                soalDiragukan.Add(false);
-            }
+                InitializeComponent();
+                LoadSoal();
+                currentSoalIndex = 0;
+                timeLeft = 60 * 60; // 60 menit
 
-            buttons = new Button[20];
-            for (int i = 1; i <= 20; i++)
-            {
-                string buttonName = "btnNo" + i;
-                Control[] controls = this.Controls.Find(buttonName, true);
-                if (controls.Length > 0 && controls[0] is Button button)
+                jawabanUser = new List<string>();
+                soalDiragukan = new List<bool>();
+                for (int i = 0; i < daftarSoal.Count; i++)
                 {
-                    buttons[i - 1] = button;
-
+                    jawabanUser.Add(""); // Isi dengan string kosong
+                    soalDiragukan.Add(false);
                 }
-            }
 
-            StartTimer();
-            DisplaySoal();
-            UpdateQuestionList(); // Panggil UpdateQuestionList di sini
-        }
-
-        private void LoadSoal()
-        {
-            try
-            {
-                using (IDbConnection conn = new SQLiteConnection(Connection.ConnectionString))
+                buttons = new Button[20];
+                for (int i = 1; i <= 20; i++)
                 {
-                    conn.Open();
-                    daftarSoal = conn.Query<sooal>(
-                        "SELECT * FROM banksoal ORDER BY RANDOM() LIMIT 20"
-                    ).AsList();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-            }
-        }
-
-        private void DisplaySoal()
-        {
-            if (currentSoalIndex >= 0 && currentSoalIndex < daftarSoal.Count)
-            {
-                sooal soal = daftarSoal[currentSoalIndex];
-                lblQuestion.Text = soal.Soal;
-                string[] pilihan = soal.Pilihan.Split(';');
-
-                // Clear pilihan jawaban sebelumnya
-                cbAns1.Checked = false;
-                cbAns2.Checked = false;
-                cbAns3.Checked = false;
-                cbAns4.Checked = false;
-
-                // Sembunyikan semua checkbox terlebih dahulu
-                cbAns1.Visible = false;
-                cbAns2.Visible = false;
-                cbAns3.Visible = false;
-                cbAns4.Visible = false;
-
-                // Tampilkan pilihan jawaban
-                for (int i = 0; i < pilihan.Length; i++)
-                {
-                    pilihan[i] = pilihan[i].Trim();
-                    switch (i)
+                    string buttonName = "btnNo" + i;
+                    Control[] controls = this.Controls.Find(buttonName, true);
+                    if (controls.Length > 0 && controls[0] is Button button)
                     {
-                        case 0:
-                            cbAns1.Text = pilihan[i];
-                            cbAns1.Visible = true;
-                            break;
-                        case 1:
-                            cbAns2.Text = pilihan[i];
-                            cbAns2.Visible = true;
-                            break;
-                        case 2:
-                            cbAns3.Text = pilihan[i];
-                            cbAns3.Visible = true;
-                            break;
-                        case 3:
-                            cbAns4.Text = pilihan[i];
-                            cbAns4.Visible = true;
-                            break;
+                        buttons[i - 1] = button;
+
                     }
                 }
 
-                lblSoalCount.Text = $"Question {currentSoalIndex + 1}";
+                StartTimer();
+                DisplaySoal();
+                UpdateQuestionList(); // Panggil UpdateQuestionList di sini
+            }
 
-
-                if (jawabanUser != null && currentSoalIndex >= 0 && currentSoalIndex < jawabanUser.Count)
+            private void LoadSoal()
+            {
+                try
                 {
-                    string jawabanSoal = jawabanUser[currentSoalIndex];
-                    if (!string.IsNullOrEmpty(jawabanSoal))
+                    using (IDbConnection conn = new SQLiteConnection(Connection.ConnectionString))
                     {
-                        string[] pilihanJawaban = jawabanSoal.Split(';');
-                        foreach (string piliha in pilihanJawaban)
+                        conn.Open();
+                        daftarSoal = conn.Query<sooal>(
+                            "SELECT * FROM banksoal ORDER BY RANDOM() LIMIT 20"
+                        ).AsList();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+
+            private void DisplaySoal()
+            {
+                sooal soal; // Deklarasikan variabel soal di sini
+                soal = daftarSoal[currentSoalIndex];
+                string tipeSoal = soal.Tipe == 1 ? "Single Choice" : "Multiple Choice"; // Gunakan objek soal
+                label11.Text = $"Question Type: {tipeSoal}, Answers: {soal.Jawaban}";
+
+                if (currentSoalIndex >= 0 && currentSoalIndex < daftarSoal.Count)
+                {
+                    lblQuestion.Text = soal.Soal;
+                    string[] pilihan = soal.Pilihan.Split(';');
+
+                    // Clear pilihan jawaban sebelumnya
+                    cbAns1.Checked = false;
+                    cbAns2.Checked = false;
+                    cbAns3.Checked = false;
+                    cbAns4.Checked = false;
+
+                    // Sembunyikan semua checkbox terlebih dahulu
+                    cbAns1.Visible = false;
+                    cbAns2.Visible = false;
+                    cbAns3.Visible = false;
+                    cbAns4.Visible = false;
+
+                    // Tampilkan pilihan jawaban
+                    for (int i = 0; i < pilihan.Length; i++)
+                    {
+                        pilihan[i] = pilihan[i].Trim();
+                        switch (i)
                         {
-                            if (!string.IsNullOrEmpty(piliha.Trim()))
+                            case 0:
+                                cbAns1.Text = pilihan[i];
+                                cbAns1.Visible = true;
+                                break;
+                            case 1:
+                                cbAns2.Text = pilihan[i];
+                                cbAns2.Visible = true;
+                                break;
+                            case 2:
+                                cbAns3.Text = pilihan[i];
+                                cbAns3.Visible = true;
+                                break;
+                            case 3:
+                                cbAns4.Text = pilihan[i];
+                                cbAns4.Visible = true;
+                                break;
+                        }
+                    }
+
+                    lblSoalCount.Text = $"Question {currentSoalIndex + 1}";
+
+
+                    if (jawabanUser != null && currentSoalIndex >= 0 && currentSoalIndex < jawabanUser.Count)
+                    {
+                        string jawabanSoal = jawabanUser[currentSoalIndex];
+                        if (!string.IsNullOrEmpty(jawabanSoal))
+                        {
+                            string[] pilihanJawaban = jawabanSoal.Split(';');
+                            foreach (string piliha in pilihanJawaban)
                             {
-                                if (cbAns1.Text == piliha.Trim()) cbAns1.Checked = true;
-                                if (cbAns2.Text == piliha.Trim()) cbAns2.Checked = true;
-                                if (cbAns3.Text == piliha.Trim()) cbAns3.Checked = true;
-                                if (cbAns4.Text == piliha.Trim()) cbAns4.Checked = true;
+                                if (!string.IsNullOrEmpty(piliha.Trim()))
+                                {
+                                    if (cbAns1.Text == piliha.Trim()) cbAns1.Checked = true;
+                                    if (cbAns2.Text == piliha.Trim()) cbAns2.Checked = true;
+                                    if (cbAns3.Text == piliha.Trim()) cbAns3.Checked = true;
+                                    if (cbAns4.Text == piliha.Trim()) cbAns4.Checked = true;
+                                }
                             }
                         }
                     }
+
+
                 }
-
-
             }
-        }
 
-        private void UpdateQuestionList()
-        {
-            for (int i = 0; i < daftarSoal.Count; i++)
+            private void UpdateQuestionList()
             {
-                if (buttons != null && i >= 0 && i < buttons.Length && buttons[i] != null)
-                {
-                    Button btnSoal = buttons[i];
 
-                    // Tentukan status jawaban dan atur warna button
-                    if (soalDiragukan[i])
+                ExamResult result = ExamResultChecker.CheckResult(daftarSoal, jawabanUser);
+                label10.Text = "Nilai: " + result.Nilai.ToString();
+                for (int i = 0; i < daftarSoal.Count; i++)
+                {
+                    if (buttons != null && i >= 0 && i < buttons.Length && buttons[i] != null)
                     {
-                        btnSoal.BackColor = Color.Orange; // Soal diragukan
+                        Button btnSoal = buttons[i];
+
+                        // Tentukan status jawaban dan atur warna button
+                        if (soalDiragukan[i])
+                        {
+                            btnSoal.BackColor = Color.Orange; // Soal diragukan
+                        }
+                        else if (!string.IsNullOrEmpty(jawabanUser[i]))
+                        {
+                            btnSoal.BackColor = Color.Green; // Soal sudah dijawab
+                        }
+                        else
+                        {
+                            btnSoal.BackColor = SystemColors.Control; // Soal belum dijawab
+                        }
+
                     }
-                    else if (!string.IsNullOrEmpty(jawabanUser[i]))
+                }
+            }
+
+
+            private void cbAns1_CheckedChanged(object sender, EventArgs e)
+            {
+                if (currentSoalIndex >= 0 && currentSoalIndex < jawabanUser.Count)
+                {
+                    if (cbAns1.Checked)
                     {
-                        btnSoal.BackColor = Color.Green; // Soal sudah dijawab
+                        if (!jawabanUser[currentSoalIndex].Contains(cbAns1.Text))
+                        {
+                            jawabanUser[currentSoalIndex] += cbAns1.Text + ";";
+                        }
                     }
                     else
                     {
-                        btnSoal.BackColor = Color.Red; // Soal belum dijawab
+                        jawabanUser[currentSoalIndex] = jawabanUser[currentSoalIndex].Replace(cbAns1.Text + ";", "");
                     }
-                    
+                    UpdateQuestionList();
                 }
             }
-        }
 
 
-        private void cbAns1_CheckedChanged(object sender, EventArgs e)
-        {
-            if (currentSoalIndex >= 0 && currentSoalIndex < jawabanUser.Count)
+
+            private void cbAns2_CheckedChanged(object sender, EventArgs e)
             {
-                if (cbAns1.Checked)
+                if (currentSoalIndex >= 0 && currentSoalIndex < jawabanUser.Count)
                 {
-                    jawabanUser[currentSoalIndex] += cbAns1.Text + ";";
+                    if (cbAns2.Checked)
+                    {
+                        if (!jawabanUser[currentSoalIndex].Contains(cbAns2.Text))
+                        {
+                            jawabanUser[currentSoalIndex] += cbAns2.Text + ";";
+                        }
+                    }
+                    else
+                    {
+                        jawabanUser[currentSoalIndex] = jawabanUser[currentSoalIndex].Replace(cbAns2.Text + ";", "");
+                    }
+                    UpdateQuestionList();
                 }
-                else
+            }
+
+            private void cbAns3_CheckedChanged(object sender, EventArgs e)
+            {
+                if (currentSoalIndex >= 0 && currentSoalIndex < jawabanUser.Count)
                 {
-                    jawabanUser[currentSoalIndex] = jawabanUser[currentSoalIndex].Replace(cbAns1.Text + ";", "");
+                    if (cbAns3.Checked)
+                    {
+                        if (!jawabanUser[currentSoalIndex].Contains(cbAns3.Text))
+                        {
+                            jawabanUser[currentSoalIndex] += cbAns3.Text + ";";
+                        }
+                    }
+                    else
+                    {
+                        jawabanUser[currentSoalIndex] = jawabanUser[currentSoalIndex].Replace(cbAns3.Text + ";", "");
+                    }
+                    UpdateQuestionList();
                 }
-                UpdateQuestionList();
-            }
-        }
-
-
-        private void cbAns2_CheckedChanged(object sender, EventArgs e)
-        {
-            if (cbAns2.Checked)
-            {
-                jawabanUser[currentSoalIndex] += cbAns2.Text + ";"; // Tambahkan jawaban ke list
-            }
-            else
-            {
-                jawabanUser[currentSoalIndex] = jawabanUser[currentSoalIndex].Replace(cbAns2.Text + ";", ""); // Hapus jawaban dari list
             }
 
-            UpdateQuestionList(); // Update tampilan pnlQuestionsList
-        }
-        private void cbAns3_CheckedChanged(object sender, EventArgs e)
-        {
-            if (cbAns3.Checked)
+            private void cbAns4_CheckedChanged(object sender, EventArgs e)
             {
-                jawabanUser[currentSoalIndex] += cbAns3.Text + ";"; // Tambahkan jawaban ke list
+                if (currentSoalIndex >= 0 && currentSoalIndex < jawabanUser.Count)
+                {
+                    if (cbAns4.Checked)
+                    {
+                        if (!jawabanUser[currentSoalIndex].Contains(cbAns4.Text))
+                        {
+                            jawabanUser[currentSoalIndex] += cbAns4.Text + ";";
+                        }
+                    }
+                    else
+                    {
+                        jawabanUser[currentSoalIndex] = jawabanUser[currentSoalIndex].Replace(cbAns4.Text + ";", "");
+                    }
+                    UpdateQuestionList();
+                }
             }
-            else
+            private void BtnSoal_Click(object sender, EventArgs e)
             {
-                jawabanUser[currentSoalIndex] = jawabanUser[currentSoalIndex].Replace(cbAns3.Text + ";", ""); // Hapus jawaban dari list
-            }
-
-            UpdateQuestionList(); // Update tampilan pnlQuestionsList
-        }
-
-        private void cbAns4_CheckedChanged(object sender, EventArgs e)
-        {
-            if (cbAns4.Checked)
-            {
-                jawabanUser[currentSoalIndex] += cbAns4.Text + ";"; // Tambahkan jawaban ke list
-            }
-            else
-            {
-                jawabanUser[currentSoalIndex] = jawabanUser[currentSoalIndex].Replace(cbAns4.Text + ";", ""); // Hapus jawaban dari list
-            }
-
-            UpdateQuestionList(); // Update tampilan pnlQuestionsList
-        }
-        private void BtnSoal_Click(object sender, EventArgs e)
-        {
-            Button btn = (Button)sender;
-            int soalIndex = int.Parse(btn.Text) - 1;
-            currentSoalIndex = soalIndex;
-            DisplaySoal();
-        }
-
-        private void btnPrevious_Click(object sender, EventArgs e)
-        {
-            if (currentSoalIndex > 0)
-            {
-                currentSoalIndex--;
+                Button btn = (Button)sender;
+                int soalIndex = int.Parse(btn.Text) - 1;
+                currentSoalIndex = soalIndex;
                 DisplaySoal();
-            }
-        }
-
-        private void btnNext_Click(object sender, EventArgs e)
-        {
-            if (currentSoalIndex < daftarSoal.Count - 1)
-            {
-                currentSoalIndex++;
-                DisplaySoal();
-
-                // Ubah teks btnNext menjadi "Submit" jika sudah soal terakhir
                 if (currentSoalIndex == daftarSoal.Count - 1)
                 {
                     btnNext.Text = "Submit";
                 }
+                else
+                {
+                    btnNext.Text = "Next";
+                }
             }
-            else
+
+            private void btnPrevious_Click(object sender, EventArgs e)
             {
-                // Soal terakhir, submit jawaban
-                examTimer.Stop(); // Hentikan timer
-
-                ExamResult result = ExamResultChecker.CheckResult(daftarSoal, jawabanUser);
-                MessageBox.Show($"Nilai Anda: {result.Nilai}\nStatus: {(result.Lulus ? "Lulus" : "Gagal")}");
-
-                // ... (logika untuk mengakhiri ujian atau menampilkan form hasil)
+                if (currentSoalIndex > 0)
+                {
+                    currentSoalIndex--;
+                    DisplaySoal();
+                }
             }
-        }
 
-
-        private void btnDoubt_Click(object sender, EventArgs e)
-        {
-            if (currentSoalIndex >= 0 && currentSoalIndex < soalDiragukan.Count)
+            private void btnNext_Click(object sender, EventArgs e)
             {
-                soalDiragukan[currentSoalIndex] = !soalDiragukan[currentSoalIndex]; // Toggle status "doubt"
-                UpdateQuestionList();
+                if (btnNext.Text == "Next")
+                {
+                    if (currentSoalIndex < daftarSoal.Count - 1)
+                    {
+                        currentSoalIndex++;
+                        DisplaySoal();
+
+                        // Ubah teks btnNext menjadi "Submit" jika sudah soal terakhir
+                        if (currentSoalIndex == daftarSoal.Count - 1)
+                        {
+                            btnNext.Text = "Submit";
+                        }
+                    }
+                    else
+                    {
+                        examTimer.Stop(); // Hentikan timer
+                        ExamResult result = ExamResultChecker.CheckResult(daftarSoal, jawabanUser);
+                        MessageBox.Show($"Nilai Anda: {result.Nilai}\nStatus: {(result.Lulus ? "Lulus" : "Gagal")}");
+
+                    }
+                }
+                else if (btnNext.Text == "Submit")
+                {
+                    if (timeLeft > 0)
+                    {
+                        //// Waktu belum habis, buka KonfirmasiPage
+                        //FinishedForm finish = new FinishedForm(); // Asumsi KonfirmasiPage menerima ExamPage sebagai parameter
+                        //finish.ShowDialog(); // Tampilkan KonfirmasiPage sebagai dialog
+                        ExamResult result = ExamResultChecker.CheckResult(daftarSoal, jawabanUser);
+                        MessageBox.Show($"Nilai Anda: {result.Nilai}\nStatus: {(result.Lulus ? "Lulus" : "Gagal")}");
+
+                    }
+                    else
+                    {
+                        // Waktu habis, submit jawaban
+                        examTimer.Stop(); // Hentikan timer
+
+                        ExamResult result = ExamResultChecker.CheckResult(daftarSoal, jawabanUser);
+                        MessageBox.Show($"Nilai Anda: {result.Nilai}\nStatus: {(result.Lulus ? "Lulus" : "Gagal")}");
+
+                        // ... (logika untuk mengakhiri ujian atau menampilkan form hasil)
+                    }
+                }
+
             }
-        }
 
-        private void StartTimer()
-        {
-            examTimer = new Timer();
-            examTimer.Interval = 1000; // 1 detik
-            examTimer.Tick += ExamTimer_Tick;
-            examTimer.Start();
-        }
 
-        private void ExamTimer_Tick(object sender, EventArgs e)
-        {
-            if (timeLeft > 0)
+            private void btnDoubt_Click(object sender, EventArgs e)
             {
-                timeLeft--;
-                UpdateTimerLabel();
+                if (currentSoalIndex >= 0 && currentSoalIndex < soalDiragukan.Count)
+                {
+                    soalDiragukan[currentSoalIndex] = !soalDiragukan[currentSoalIndex]; // Toggle status "doubt"
+                    UpdateQuestionList();
+                }
             }
-            else
-            {
-                examTimer.Stop();
-                MessageBox.Show("Waktu habis!");
-                // Akhiri ujian, submit jawaban, dll.
-            }
-        }
 
-        private void UpdateTimerLabel()
-        {
-            int minutes = timeLeft / 60;
-            int seconds = timeLeft % 60;
-            lblTimer.Text = $"{minutes:D2}:{seconds:D2}";
-        }
+            private void StartTimer()
+            {
+                examTimer = new Timer();
+                examTimer.Interval = 1000; // 1 detik
+                examTimer.Tick += ExamTimer_Tick;
+                examTimer.Start();
+            }
+
+            private void ExamTimer_Tick(object sender, EventArgs e)
+            {
+                if (timeLeft > 0)
+                {
+                    timeLeft--;
+                    UpdateTimerLabel();
+                }
+                else
+                {
+                    examTimer.Stop();
+                    MessageBox.Show("Waktu habis!");
+                    // Akhiri ujian, submit jawaban, dll.
+                }
+            }
+
+            private void UpdateTimerLabel()
+            {
+                int minutes = timeLeft / 60;
+                int seconds = timeLeft % 60;
+                lblTimer.Text = $"{minutes:D2}:{seconds:D2}";
+            }
 
         public class ExamResultChecker
         {
@@ -319,35 +377,61 @@ namespace Kelompok_D
                 for (int i = 0; i < totalSoal; i++)
                 {
                     sooal soal = daftarSoal[i];
-                    string jawabanBenar = soal.Jawaban;
-                    string jawabanUserTrim = jawabanUser[i].TrimEnd(';'); // Hapus titik koma di akhir
+                    // Ubah jawaban benar menjadi List<string>
+                    List<string> jawabanBenarList = soal.Jawaban.Split(';').ToList();
 
-                    // Membandingkan jawaban user dengan jawaban benar
-                    if (jawabanBenar == jawabanUserTrim)
+                    // Ubah jawaban user menjadi List<string>
+                    List<string> jawabanUserList = jawabanUser[i].TrimEnd(';').Split(';').ToList();
+
+                    // Normalisasi dan urutkan jawaban
+                    jawabanBenarList = NormalizeJawaban(jawabanBenarList);
+                    jawabanUserList = NormalizeJawaban(jawabanUserList);
+
+                    // Bandingkan jawaban yang sudah dinormalisasi dan diurutkan
+                    if (jawabanBenarList.SequenceEqual(jawabanUserList))
                     {
                         jumlahBenar++;
                     }
                 }
 
-                int nilai = jumlahBenar * 5; // Setiap soal bernilai 5 poin
-                bool lulus = nilai >= 70; // Minimal nilai kelulusan 70
+                int nilai = jumlahBenar * 5;
+                bool lulus = nilai >= 70;
 
                 return new ExamResult(nilai, lulus);
             }
-        }
 
-        public class ExamResult
-        {
-            public int Nilai { get; }
-            public bool Lulus { get; }
-
-            public ExamResult(int nilai, bool lulus)
+            // Fungsi NormalizeJawaban untuk List<string>
+            private static List<string> NormalizeJawaban(List<string> jawaban)
             {
-                Nilai = nilai;
-                Lulus = lulus;
+                if (jawaban == null || jawaban.Count == 0)
+                {
+                    return new List<string>();
+                }
+
+                // 1. Hapus spasi di awal/akhir dan ubah ke huruf kecil
+                jawaban = jawaban.Select(j => j.Trim().ToLower()).ToList();
+
+                // 2. Urutkan pilihan jawaban
+                jawaban.Sort();
+
+                return jawaban;
             }
         }
 
-    }
 
-}
+
+        public class ExamResult
+            {
+                public int Nilai { get; }
+                public bool Lulus { get; }
+
+                public ExamResult(int nilai, bool lulus)
+                {
+                    Nilai = nilai;
+                    Lulus = lulus;
+                }
+            }
+
+        }
+
+    }

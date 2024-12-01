@@ -3,20 +3,48 @@
   "WorkspaceRootPath": "C:\\Users\\Lenovo\\Desktop\\New folder\\Kelompok-D\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DF2B433A-87B1-421B-86A0-D498A7ED752C}|Kelompok D\\Kelompok D.csproj|c:\\users\\lenovo\\desktop\\new folder\\kelompok-d\\kelompok d\\exampage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{DF2B433A-87B1-421B-86A0-D498A7ED752C}|Kelompok D\\Kelompok D.csproj|C:\\Users\\Lenovo\\Desktop\\New folder\\Kelompok-D\\kelompok d\\exampage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{DF2B433A-87B1-421B-86A0-D498A7ED752C}|Kelompok D\\Kelompok D.csproj|solutionrelative:kelompok d\\exampage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DF2B433A-87B1-421B-86A0-D498A7ED752C}|Kelompok D\\Kelompok D.csproj|c:\\users\\lenovo\\desktop\\new folder\\kelompok-d\\kelompok d\\adminpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{DF2B433A-87B1-421B-86A0-D498A7ED752C}|Kelompok D\\Kelompok D.csproj|solutionrelative:kelompok d\\adminpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DF2B433A-87B1-421B-86A0-D498A7ED752C}|Kelompok D\\Kelompok D.csproj|C:\\Users\\Lenovo\\Desktop\\New folder\\Kelompok-D\\kelompok d\\exampage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DF2B433A-87B1-421B-86A0-D498A7ED752C}|Kelompok D\\Kelompok D.csproj|c:\\users\\lenovo\\desktop\\new folder\\kelompok-d\\kelompok d\\exampage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DF2B433A-87B1-421B-86A0-D498A7ED752C}|Kelompok D\\Kelompok D.csproj|solutionrelative:kelompok d\\exampage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DF2B433A-87B1-421B-86A0-D498A7ED752C}|Kelompok D\\Kelompok D.csproj|C:\\Users\\Lenovo\\Desktop\\New folder\\Kelompok-D\\kelompok d\\exampage.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DF2B433A-87B1-421B-86A0-D498A7ED752C}|Kelompok D\\Kelompok D.csproj|solutionrelative:kelompok d\\exampage.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DF2B433A-87B1-421B-86A0-D498A7ED752C}|Kelompok D\\Kelompok D.csproj|C:\\Users\\Lenovo\\Desktop\\New folder\\Kelompok-D\\kelompok d\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DF2B433A-87B1-421B-86A0-D498A7ED752C}|Kelompok D\\Kelompok D.csproj|solutionrelative:kelompok d\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF2B433A-87B1-421B-86A0-D498A7ED752C}|Kelompok D\\Kelompok D.csproj|c:\\users\\lenovo\\desktop\\new folder\\kelompok-d\\kelompok d\\sooal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF2B433A-87B1-421B-86A0-D498A7ED752C}|Kelompok D\\Kelompok D.csproj|solutionrelative:kelompok d\\sooal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF2B433A-87B1-421B-86A0-D498A7ED752C}|Kelompok D\\Kelompok D.csproj|C:\\Users\\Lenovo\\Desktop\\New folder\\Kelompok-D\\kelompok d\\adminpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DF2B433A-87B1-421B-86A0-D498A7ED752C}|Kelompok D\\Kelompok D.csproj|solutionrelative:kelompok d\\adminpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF2B433A-87B1-421B-86A0-D498A7ED752C}|Kelompok D\\Kelompok D.csproj|c:\\users\\lenovo\\desktop\\new folder\\kelompok-d\\kelompok d\\konfirmasipage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DF2B433A-87B1-421B-86A0-D498A7ED752C}|Kelompok D\\Kelompok D.csproj|solutionrelative:kelompok d\\konfirmasipage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF2B433A-87B1-421B-86A0-D498A7ED752C}|Kelompok D\\Kelompok D.csproj|c:\\users\\lenovo\\desktop\\new folder\\kelompok-d\\kelompok d\\userpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DF2B433A-87B1-421B-86A0-D498A7ED752C}|Kelompok D\\Kelompok D.csproj|solutionrelative:kelompok d\\userpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF2B433A-87B1-421B-86A0-D498A7ED752C}|Kelompok D\\Kelompok D.csproj|c:\\users\\lenovo\\desktop\\new folder\\kelompok-d\\kelompok d\\finishedform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF2B433A-87B1-421B-86A0-D498A7ED752C}|Kelompok D\\Kelompok D.csproj|solutionrelative:kelompok d\\finishedform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF2B433A-87B1-421B-86A0-D498A7ED752C}|Kelompok D\\Kelompok D.csproj|c:\\users\\lenovo\\desktop\\new folder\\kelompok-d\\kelompok d\\konfirmasipage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF2B433A-87B1-421B-86A0-D498A7ED752C}|Kelompok D\\Kelompok D.csproj|solutionrelative:kelompok d\\konfirmasipage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF2B433A-87B1-421B-86A0-D498A7ED752C}|Kelompok D\\Kelompok D.csproj|c:\\users\\lenovo\\desktop\\new folder\\kelompok-d\\kelompok d\\finishedform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DF2B433A-87B1-421B-86A0-D498A7ED752C}|Kelompok D\\Kelompok D.csproj|solutionrelative:kelompok d\\finishedform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF2B433A-87B1-421B-86A0-D498A7ED752C}|Kelompok D\\Kelompok D.csproj|c:\\users\\lenovo\\desktop\\new folder\\kelompok-d\\kelompok d\\finishedform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF2B433A-87B1-421B-86A0-D498A7ED752C}|Kelompok D\\Kelompok D.csproj|solutionrelative:kelompok d\\finishedform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DF2B433A-87B1-421B-86A0-D498A7ED752C}|Kelompok D\\Kelompok D.csproj|C:\\Users\\Lenovo\\Desktop\\New folder\\Kelompok-D\\kelompok d\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -30,7 +58,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -51,6 +79,131 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "ExamPage.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\New folder\\Kelompok-D\\Kelompok D\\ExamPage.cs",
+              "RelativeDocumentMoniker": "Kelompok D\\ExamPage.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\New folder\\Kelompok-D\\Kelompok D\\ExamPage.cs*",
+              "RelativeToolTip": "Kelompok D\\ExamPage.cs*",
+              "ViewState": "AgIAALUBAAAAAAAAAAAAADIBAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-30T20:03:12.294Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ExamPage.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\New folder\\Kelompok-D\\Kelompok D\\ExamPage.cs",
+              "RelativeDocumentMoniker": "Kelompok D\\ExamPage.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\New folder\\Kelompok-D\\Kelompok D\\ExamPage.cs [Design]*",
+              "RelativeToolTip": "Kelompok D\\ExamPage.cs [Design]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-30T19:45:07.024Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "sooal.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\New folder\\Kelompok-D\\Kelompok D\\sooal.cs",
+              "RelativeDocumentMoniker": "Kelompok D\\sooal.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\New folder\\Kelompok-D\\Kelompok D\\sooal.cs",
+              "RelativeToolTip": "Kelompok D\\sooal.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-01T10:16:41.154Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UserPage.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\New folder\\Kelompok-D\\Kelompok D\\UserPage.cs",
+              "RelativeDocumentMoniker": "Kelompok D\\UserPage.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\New folder\\Kelompok-D\\Kelompok D\\UserPage.cs [Design]",
+              "RelativeToolTip": "Kelompok D\\UserPage.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-01T09:31:26.97Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "FinishedForm.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\New folder\\Kelompok-D\\Kelompok D\\FinishedForm.Designer.cs",
+              "RelativeDocumentMoniker": "Kelompok D\\FinishedForm.Designer.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\New folder\\Kelompok-D\\Kelompok D\\FinishedForm.Designer.cs",
+              "RelativeToolTip": "Kelompok D\\FinishedForm.Designer.cs",
+              "ViewState": "AgIAAI0AAAAAAAAAAAAnwKMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-01T09:30:00.643Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "KonfirmasiPage.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\New folder\\Kelompok-D\\Kelompok D\\KonfirmasiPage.cs",
+              "RelativeDocumentMoniker": "Kelompok D\\KonfirmasiPage.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\New folder\\Kelompok-D\\Kelompok D\\KonfirmasiPage.cs",
+              "RelativeToolTip": "Kelompok D\\KonfirmasiPage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-01T09:19:48.727Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "FinishedForm.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\New folder\\Kelompok-D\\Kelompok D\\FinishedForm.cs",
+              "RelativeDocumentMoniker": "Kelompok D\\FinishedForm.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\New folder\\Kelompok-D\\Kelompok D\\FinishedForm.cs",
+              "RelativeToolTip": "Kelompok D\\FinishedForm.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAewBUAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-01T08:30:52.114Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "FinishedForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\New folder\\Kelompok-D\\Kelompok D\\FinishedForm.cs",
+              "RelativeDocumentMoniker": "Kelompok D\\FinishedForm.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\New folder\\Kelompok-D\\Kelompok D\\FinishedForm.cs [Design]",
+              "RelativeToolTip": "Kelompok D\\FinishedForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-01T08:22:50.397Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "KonfirmasiPage.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\New folder\\Kelompok-D\\Kelompok D\\KonfirmasiPage.cs",
+              "RelativeDocumentMoniker": "Kelompok D\\KonfirmasiPage.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\New folder\\Kelompok-D\\Kelompok D\\KonfirmasiPage.cs [Design]",
+              "RelativeToolTip": "Kelompok D\\KonfirmasiPage.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-01T08:21:50.395Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Home.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\New folder\\Kelompok-D\\Kelompok D\\Home.cs",
+              "RelativeDocumentMoniker": "Kelompok D\\Home.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\New folder\\Kelompok-D\\Kelompok D\\Home.cs [Design]",
+              "RelativeToolTip": "Kelompok D\\Home.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-01T08:04:26.791Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "AdminPage.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\New folder\\Kelompok-D\\Kelompok D\\AdminPage.cs",
               "RelativeDocumentMoniker": "Kelompok D\\AdminPage.cs",
@@ -62,45 +215,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ExamPage.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\New folder\\Kelompok-D\\Kelompok D\\ExamPage.Designer.cs",
-              "RelativeDocumentMoniker": "Kelompok D\\ExamPage.Designer.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\New folder\\Kelompok-D\\Kelompok D\\ExamPage.Designer.cs",
-              "RelativeToolTip": "Kelompok D\\ExamPage.Designer.cs",
-              "ViewState": "AgIAAJYBAAAAAAAAAAAAAK0BAABBAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-30T21:16:19.106Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ExamPage.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\New folder\\Kelompok-D\\Kelompok D\\ExamPage.cs",
-              "RelativeDocumentMoniker": "Kelompok D\\ExamPage.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\New folder\\Kelompok-D\\Kelompok D\\ExamPage.cs",
-              "RelativeToolTip": "Kelompok D\\ExamPage.cs",
-              "ViewState": "AgIAAFQAAAAAAAAAAAAAAF8AAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-30T20:03:12.294Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ExamPage.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\New folder\\Kelompok-D\\Kelompok D\\ExamPage.cs",
-              "RelativeDocumentMoniker": "Kelompok D\\ExamPage.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\Desktop\\New folder\\Kelompok-D\\Kelompok D\\ExamPage.cs [Design]",
-              "RelativeToolTip": "Kelompok D\\ExamPage.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-30T19:45:07.024Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 11,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Lenovo\\Desktop\\New folder\\Kelompok-D\\Kelompok D\\Program.cs",
               "RelativeDocumentMoniker": "Kelompok D\\Program.cs",
@@ -108,7 +223,8 @@
               "RelativeToolTip": "Kelompok D\\Program.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAowBIAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-30T19:55:12.884Z"
+              "WhenOpened": "2024-11-30T19:55:12.884Z",
+              "EditorCaption": ""
             }
           ]
         },
