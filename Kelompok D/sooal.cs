@@ -13,5 +13,7 @@ namespace Kelompok_D
         public string Pilihan { get; set; }
         public int Tipe { get; set; }
         public string Jawaban { get; set; }
+        public int JumlahJawaban { get; set; } // Properti baru untuk menyimpan jumlah jawaban
+
     }
 }

@@ -70,6 +70,9 @@
             this.cbAns1 = new System.Windows.Forms.CheckBox();
             this.lblQuestion = new System.Windows.Forms.Label();
             this.lblSoalCount = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.pnlQuestionsList.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -99,6 +102,8 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.label11);
+            this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.lblTimer);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
@@ -114,14 +119,15 @@
             this.lblTimer.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.lblTimer.Location = new System.Drawing.Point(815, 10);
             this.lblTimer.Name = "lblTimer";
-            this.lblTimer.Size = new System.Drawing.Size(62, 20);
+            this.lblTimer.Size = new System.Drawing.Size(60, 20);
             this.lblTimer.TabIndex = 2;
-            this.lblTimer.Text = "label11";
+            this.lblTimer.Text = "mm:ss";
             // 
             // pnlQuestionsList
             // 
             this.pnlQuestionsList.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
+            this.pnlQuestionsList.AutoSize = true;
             this.pnlQuestionsList.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlQuestionsList.Controls.Add(this.label9);
             this.pnlQuestionsList.Controls.Add(this.label8);
@@ -166,10 +172,11 @@
             // 
             // label8
             // 
+            this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(39, 523);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(142, 20);
+            this.label8.Size = new System.Drawing.Size(126, 20);
             this.label8.TabIndex = 25;
             this.label8.Text = "Not Answered";
             // 
@@ -184,7 +191,7 @@
             // 
             // label6
             // 
-            this.label6.BackColor = System.Drawing.Color.Red;
+            this.label6.BackColor = System.Drawing.SystemColors.Control;
             this.label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label6.Location = new System.Drawing.Point(8, 520);
             this.label6.Name = "label6";
@@ -431,10 +438,11 @@
             // 
             // label3
             // 
+            this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(16, 10);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(152, 27);
+            this.label3.Size = new System.Drawing.Size(150, 25);
             this.label3.TabIndex = 3;
             this.label3.Text = "Questions List";
             // 
@@ -444,6 +452,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.label12);
             this.panel3.Controls.Add(this.button23);
             this.panel3.Controls.Add(this.btnNext);
             this.panel3.Controls.Add(this.btnPrevious);
@@ -496,10 +505,11 @@
             // 
             // cbAns4
             // 
+            this.cbAns4.AutoSize = true;
             this.cbAns4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbAns4.Location = new System.Drawing.Point(22, 233);
+            this.cbAns4.Location = new System.Drawing.Point(46, 244);
             this.cbAns4.Name = "cbAns4";
-            this.cbAns4.Size = new System.Drawing.Size(663, 30);
+            this.cbAns4.Size = new System.Drawing.Size(45, 29);
             this.cbAns4.TabIndex = 32;
             this.cbAns4.Text = "d";
             this.cbAns4.UseVisualStyleBackColor = true;
@@ -507,10 +517,11 @@
             // 
             // cbAns3
             // 
+            this.cbAns3.AutoSize = true;
             this.cbAns3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbAns3.Location = new System.Drawing.Point(22, 197);
+            this.cbAns3.Location = new System.Drawing.Point(46, 208);
             this.cbAns3.Name = "cbAns3";
-            this.cbAns3.Size = new System.Drawing.Size(663, 30);
+            this.cbAns3.Size = new System.Drawing.Size(44, 29);
             this.cbAns3.TabIndex = 31;
             this.cbAns3.Text = "c";
             this.cbAns3.UseVisualStyleBackColor = true;
@@ -518,10 +529,11 @@
             // 
             // cbAns2
             // 
+            this.cbAns2.AutoSize = true;
             this.cbAns2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbAns2.Location = new System.Drawing.Point(22, 161);
+            this.cbAns2.Location = new System.Drawing.Point(46, 172);
             this.cbAns2.Name = "cbAns2";
-            this.cbAns2.Size = new System.Drawing.Size(663, 30);
+            this.cbAns2.Size = new System.Drawing.Size(45, 29);
             this.cbAns2.TabIndex = 30;
             this.cbAns2.Text = "b";
             this.cbAns2.UseVisualStyleBackColor = true;
@@ -529,10 +541,11 @@
             // 
             // cbAns1
             // 
+            this.cbAns1.AutoSize = true;
             this.cbAns1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbAns1.Location = new System.Drawing.Point(22, 125);
+            this.cbAns1.Location = new System.Drawing.Point(46, 136);
             this.cbAns1.Name = "cbAns1";
-            this.cbAns1.Size = new System.Drawing.Size(663, 30);
+            this.cbAns1.Size = new System.Drawing.Size(45, 29);
             this.cbAns1.TabIndex = 29;
             this.cbAns1.Text = "a";
             this.cbAns1.UseVisualStyleBackColor = true;
@@ -541,12 +554,11 @@
             // lblQuestion
             // 
             this.lblQuestion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQuestion.Location = new System.Drawing.Point(17, 49);
+            this.lblQuestion.Location = new System.Drawing.Point(41, 74);
             this.lblQuestion.Name = "lblQuestion";
-            this.lblQuestion.Size = new System.Drawing.Size(709, 57);
+            this.lblQuestion.Size = new System.Drawing.Size(680, 57);
             this.lblQuestion.TabIndex = 28;
             this.lblQuestion.Text = "Soal";
-            this.lblQuestion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblSoalCount
             // 
@@ -557,6 +569,33 @@
             this.lblSoalCount.TabIndex = 27;
             this.lblSoalCount.Text = "Question 1";
             this.lblSoalCount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(394, 18);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(51, 16);
+            this.label10.TabIndex = 3;
+            this.label10.Text = "label10";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(502, 19);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(51, 16);
+            this.label11.TabIndex = 4;
+            this.label11.Text = "label11";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(646, 474);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(51, 16);
+            this.label12.TabIndex = 36;
+            this.label12.Text = "label12";
             // 
             // ExamPage
             // 
@@ -577,8 +616,11 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.pnlQuestionsList.ResumeLayout(false);
+            this.pnlQuestionsList.PerformLayout();
             this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -626,5 +668,8 @@
         private System.Windows.Forms.Button btnNext;
         private System.Windows.Forms.Label lblTimer;
         private System.Windows.Forms.Button btnNo3;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
     }
 }
