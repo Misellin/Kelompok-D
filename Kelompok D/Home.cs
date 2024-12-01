@@ -64,8 +64,8 @@ namespace Kelompok_D
                         }
                         else if (user.Role == "peserta")
                         {
-                            //ExamForm examForm = new ExamForm();
-                            //examForm.Show();
+                            ParInformationPage parInformationPage = new ParInformationPage();
+                            parInformationPage.Show();
                             //this.Hide();
                         }
                     }

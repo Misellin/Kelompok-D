@@ -75,7 +75,7 @@
             this.label1.Location = new System.Drawing.Point(367, 47);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(165, 20);
-            this.label1.TabIndex = 2;
+            this.label1.TabIndex = 1;
             this.label1.Text = "Online Exam System";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -89,7 +89,7 @@
             this.panel1.Location = new System.Drawing.Point(12, 13);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(922, 90);
-            this.panel1.TabIndex = 3;
+            this.panel1.TabIndex = 0;
             // 
             // label3
             // 
@@ -99,7 +99,7 @@
             this.label3.Location = new System.Drawing.Point(367, 17);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(165, 30);
-            this.label3.TabIndex = 3;
+            this.label3.TabIndex = 0;
             this.label3.Text = "OES";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -109,7 +109,8 @@
             this.btnHomepage.Location = new System.Drawing.Point(17, 13);
             this.btnHomepage.Name = "btnHomepage";
             this.btnHomepage.Size = new System.Drawing.Size(161, 40);
-            this.btnHomepage.TabIndex = 5;
+            this.btnHomepage.TabIndex = 0;
+            this.btnHomepage.TabStop = false;
             this.btnHomepage.Text = "Home";
             this.btnHomepage.UseVisualStyleBackColor = true;
             this.btnHomepage.Click += new System.EventHandler(this.btnHome_Click);
@@ -120,7 +121,8 @@
             this.btnLoginpage.Location = new System.Drawing.Point(17, 59);
             this.btnLoginpage.Name = "btnLoginpage";
             this.btnLoginpage.Size = new System.Drawing.Size(161, 40);
-            this.btnLoginpage.TabIndex = 6;
+            this.btnLoginpage.TabIndex = 0;
+            this.btnLoginpage.TabStop = false;
             this.btnLoginpage.Text = "Login";
             this.btnLoginpage.UseVisualStyleBackColor = true;
             this.btnLoginpage.Click += new System.EventHandler(this.btnLoginpage_Click);
@@ -131,7 +133,7 @@
             this.btnOut.Location = new System.Drawing.Point(17, 105);
             this.btnOut.Name = "btnOut";
             this.btnOut.Size = new System.Drawing.Size(161, 40);
-            this.btnOut.TabIndex = 7;
+            this.btnOut.TabIndex = 0;
             this.btnOut.Text = "Out";
             this.btnOut.UseVisualStyleBackColor = true;
             this.btnOut.Click += new System.EventHandler(this.btnOut_Click);
@@ -211,6 +213,7 @@
             this.pnlLogin.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlLogin.BackColor = System.Drawing.Color.Transparent;
             this.pnlLogin.Controls.Add(this.panel5);
             this.pnlLogin.Controls.Add(this.panel6);
             this.pnlLogin.Location = new System.Drawing.Point(209, 102);
@@ -236,7 +239,7 @@
             this.label5.Location = new System.Drawing.Point(3, 7);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(106, 25);
-            this.label5.TabIndex = 10;
+            this.label5.TabIndex = 0;
             this.label5.Text = "Login";
             // 
             // panel6
@@ -296,7 +299,7 @@
             this.txtNIM.Multiline = true;
             this.txtNIM.Name = "txtNIM";
             this.txtNIM.Size = new System.Drawing.Size(450, 25);
-            this.txtNIM.TabIndex = 14;
+            this.txtNIM.TabIndex = 1;
             // 
             // btnLogin
             // 
@@ -305,7 +308,7 @@
             this.btnLogin.Location = new System.Drawing.Point(287, 132);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(138, 41);
-            this.btnLogin.TabIndex = 23;
+            this.btnLogin.TabIndex = 4;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
@@ -317,7 +320,7 @@
             this.cbShowPass.Location = new System.Drawing.Point(154, 100);
             this.cbShowPass.Name = "cbShowPass";
             this.cbShowPass.Size = new System.Drawing.Size(125, 20);
-            this.cbShowPass.TabIndex = 22;
+            this.cbShowPass.TabIndex = 3;
             this.cbShowPass.Text = "Show Password";
             this.cbShowPass.UseVisualStyleBackColor = true;
             this.cbShowPass.CheckedChanged += new System.EventHandler(this.cbShowPass_CheckedChanged_1);
@@ -365,7 +368,7 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '•';
             this.txtPassword.Size = new System.Drawing.Size(442, 25);
-            this.txtPassword.TabIndex = 15;
+            this.txtPassword.TabIndex = 2;
             // 
             // Home
             // 
@@ -374,8 +377,8 @@
             this.ClientSize = new System.Drawing.Size(946, 509);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.pnlHomepage);
             this.Controls.Add(this.pnlLogin);
+            this.Controls.Add(this.pnlHomepage);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Home";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -34,3 +34,7 @@ C:\Users\Lenovo\Desktop\New folder\Kelompok-D\Kelompok D\bin\Debug\EntityFramewo
 C:\Users\Lenovo\Desktop\New folder\Kelompok-D\Kelompok D\bin\Debug\System.Data.SQLite.xml
 C:\Users\Lenovo\Desktop\New folder\Kelompok-D\Kelompok D\obj\Debug\Kelompok D.csproj.Up2Date
 C:\Users\Lenovo\Desktop\New folder\Kelompok-D\Kelompok D\obj\Debug\Kelompok_D.teslayout.resources
+C:\Users\Lenovo\Desktop\New folder\Kelompok-D\Kelompok D\obj\Debug\Kelompok_D.ExamPage.resources
+C:\Users\Lenovo\Desktop\New folder\Kelompok-D\Kelompok D\obj\Debug\Kelompok_D.FinishedForm.resources
+C:\Users\Lenovo\Desktop\New folder\Kelompok-D\Kelompok D\obj\Debug\Kelompok_D.KonfirmasiPage.resources
+C:\Users\Lenovo\Desktop\New folder\Kelompok-D\Kelompok D\obj\Debug\Kelompok_D.ParInformationPage.resources
