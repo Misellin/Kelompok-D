@@ -8,19 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Kelompok_D
+namespace Kelompok_D.useControl
 {
-    public partial class KonfirmasiPage : Form
+    public partial class uC_DataSoal : UserControl
     {
-        public KonfirmasiPage()
+        public uC_DataSoal()
         {
             InitializeComponent();
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            ExamPage exam = new ExamPage();
-            exam.Show();
         }
     }
 }

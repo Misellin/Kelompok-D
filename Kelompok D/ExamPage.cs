@@ -17,6 +17,7 @@ namespace Kelompok_D
         public List<sooal> daftarSoal;
         private int currentSoalIndex;
         public Timer examTimer;
+        public TimeSpan timeElapsed { get; private set; } // Properti untuk menyimpan lama ujian
         private int timeLeft;
         public List<string> jawabanUser; // List untuk menyimpan jawaban user
         private List<bool> soalDiragukan; // List untuk menyimpan status "doubt"
@@ -26,6 +27,7 @@ namespace Kelompok_D
         {
             InitializeComponent();
             LoadSoal();
+            label14.Text = Home.currentUserID.ToString();
             currentSoalIndex = 0;
             timeLeft = 60 * 60; // 60 menit
 
@@ -48,7 +50,7 @@ namespace Kelompok_D
 
                 }
             }
-
+            btnPrevious.Visible = false;
             StartTimer();
             DisplaySoal();
             UpdateQuestionList(); // Panggil UpdateQuestionList di sini
@@ -74,9 +76,9 @@ namespace Kelompok_D
 
         private void DisplaySoal()
         {
-            sooal soal; // Deklarasikan variabel soal di sini
+            sooal soal; 
             soal = daftarSoal[currentSoalIndex];
-            string tipeSoal = soal.Tipe == 1 ? "Single Choice" : "Multiple Choice"; // Gunakan objek soal
+            string tipeSoal = soal.Tipe == 1 ? "Single Choice" : "Multiple Choice";
             label11.Text = $"Question Type: {tipeSoal}, Answers: {soal.Jawaban}";
 
             if (currentSoalIndex >= 0 && currentSoalIndex < daftarSoal.Count)
@@ -84,13 +86,11 @@ namespace Kelompok_D
                 lblQuestion.Text = soal.Soal;
                 string[] pilihan = soal.Pilihan.Split(';');
 
-                // Clear pilihan jawaban sebelumnya
                 cbAns1.Checked = false;
                 cbAns2.Checked = false;
                 cbAns3.Checked = false;
                 cbAns4.Checked = false;
 
-                // Sembunyikan semua checkbox terlebih dahulu
                 cbAns1.Visible = false;
                 cbAns2.Visible = false;
                 cbAns3.Visible = false;
@@ -98,7 +98,6 @@ namespace Kelompok_D
                 Random rnd = new Random();
                 pilihan = pilihan.OrderBy(x => rnd.Next()).ToArray();
 
-                // Tampilkan pilihan jawaban
                 for (int i = 0; i < pilihan.Length; i++)
                 {
                     pilihan[i] = pilihan[i].Trim();
@@ -124,7 +123,7 @@ namespace Kelompok_D
                         }
                 }
 
-                lblSoalCount.Text = $"Question {currentSoalIndex + 1}";
+                lblSoalCount.Text = $"{currentSoalIndex + 1}";
 
 
                 if (jawabanUser != null && currentSoalIndex >= 0 && currentSoalIndex < jawabanUser.Count)
@@ -263,11 +262,17 @@ namespace Kelompok_D
             DisplaySoal();
             if (currentSoalIndex == daftarSoal.Count - 1)
             {
-                btnNext.Text = "Submit";
+                btnNext.Visible = false;
+                btnPrevious.Visible = true;
             }
-            else
+            else if (currentSoalIndex == 0)
             {
-                btnNext.Text = "Next";
+                btnNext.Visible = true;
+                btnPrevious.Visible = false;
+            }
+            else {
+                btnNext.Visible = true;
+                btnPrevious.Visible = true;
             }
         }
 
@@ -278,45 +283,45 @@ namespace Kelompok_D
                 currentSoalIndex--;
                 DisplaySoal();
             }
+            if (currentSoalIndex == daftarSoal.Count - 1)
+            {
+                btnNext.Visible = false;
+                btnPrevious.Visible = true;
+            }
+            else if (currentSoalIndex == 0)
+            {
+                btnNext.Visible = true;
+                btnPrevious.Visible = false;
+            }
+            else
+            {
+                btnNext.Visible = true;
+                btnPrevious.Visible = true;
+            }
         }
 
         private void btnNext_Click(object sender, EventArgs e)
         {
-            if (btnNext.Text == "Next")
+            if (currentSoalIndex < daftarSoal.Count - 1)
             {
-                if (currentSoalIndex < daftarSoal.Count - 1)
-                {
-                    currentSoalIndex++;
-                    DisplaySoal();
-
-                    // Ubah teks btnNext menjadi "Submit" jika sudah soal terakhir
-                    if (currentSoalIndex == daftarSoal.Count - 1)
-                    {
-                        btnNext.Text = "Submit";
-                    }
-                }
-                    
+                currentSoalIndex++;
+                DisplaySoal();
             }
-            else if (btnNext.Text == "Submit")
+            if (currentSoalIndex == daftarSoal.Count - 1)
             {
-                if (timeLeft > 0)
-                {
-                    //// Waktu belum habis, buka KonfirmasiPage
-                    FinishedForm konfirmasiForm = new FinishedForm(this); // Kirim instance ExamPage ke FinishedForm
-                    konfirmasiForm.ShowDialog();
-
-                }
-                else
-                {
-                    // Waktu habis, submit jawaban
-                    examTimer.Stop(); // Hentikan timer
-                    ExamResult result = ExamResultChecker.CheckResult(daftarSoal, jawabanUser);
-
-                    ScorePage scorePage = new ScorePage(result); // Pass objek ExamResult ke ScorePage
-                    scorePage.Show();
-                }
+                btnNext.Visible = false;
+                btnPrevious.Visible = true;
             }
-
+            else if (currentSoalIndex == 0)
+            {
+                btnNext.Visible = true;
+                btnPrevious.Visible = false;
+            }
+            else
+            {
+                btnNext.Visible = true;
+                btnPrevious.Visible = true;
+            }
         }
 
 
@@ -342,13 +347,14 @@ namespace Kelompok_D
             if (timeLeft > 0)
             {
                 timeLeft--;
+                timeElapsed += TimeSpan.FromSeconds(1); 
                 UpdateTimerLabel();
+
             }
             else
             {
                 examTimer.Stop();
                 MessageBox.Show("Waktu habis!");
-                // Akhiri ujian, submit jawaban, dll.
             }
         }
 
@@ -393,7 +399,7 @@ namespace Kelompok_D
         }
 
         // Fungsi NormalizeJawaban untuk List<string>
-        private static List<string> NormalizeJawaban(List<string> jawaban)
+        public static List<string> NormalizeJawaban(List<string> jawaban)
         {
             if (jawaban == null || jawaban.Count == 0)
             {
@@ -424,14 +430,44 @@ namespace Kelompok_D
             }
         }
 
-    private void button1_Click(object sender, EventArgs e)
-    {
-        examTimer.Stop();
-    }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            examTimer.Stop();
+        }
 
         private void pnlQuestionsList_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void lblSoalCount_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (timeLeft > 0)
+            {
+                //// Waktu belum habis, buka KonfirmasiPage
+                FinishedForm konfirmasiForm = new FinishedForm(this); // Kirim instance ExamPage ke FinishedForm
+                konfirmasiForm.ShowDialog();
+
+            }
+            else
+            {
+                // Waktu habis, submit jawaban
+                examTimer.Stop(); // Hentikan timer
+                ExamResult result = ExamResultChecker.CheckResult(daftarSoal, jawabanUser);
+
+                ScorePage scorePage = new ScorePage(result); // Pass objek ExamResult ke ScorePage
+                scorePage.Show();
+            }
         }
     }
 

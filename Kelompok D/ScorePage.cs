@@ -18,11 +18,10 @@ namespace Kelompok_D
             InitializeComponent();
             lblResult.Text = result.Lulus ? "Pass" : "Fail";
             lblScore.Text = result.Nilai.ToString();
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
+            if (lblResult.Text == "Fail")
+            {
+                lblScore.ForeColor = Color.Red;
+            }
 
         }
 
@@ -30,6 +29,14 @@ namespace Kelompok_D
         {
             Home home = new Home();
             home.Show();
+        }
+
+        private void lblScore_Click(object sender, EventArgs e)
+        {
+            if (lblResult.Text == "Fail")
+            {
+                lblResult.ForeColor = Color.Red;
+            }
         }
     }
 }

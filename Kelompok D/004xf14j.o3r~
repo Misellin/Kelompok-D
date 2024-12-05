@@ -17,7 +17,6 @@ namespace Kelompok_D
 {
     public partial class Home : Form
     {
-        public static int currentUserID;
         public Home()
         {
             InitializeComponent();
@@ -56,7 +55,6 @@ namespace Kelompok_D
                     if (user != null)
                     {
                         MessageBox.Show("Login berhasil!");
-                        currentUserID = user.UserID;
 
                         if (user.Role == "admin")
                         {
@@ -66,7 +64,6 @@ namespace Kelompok_D
                         }
                         else if (user.Role == "peserta")
                         {
-
                             ParInformationPage parInformationPage = new ParInformationPage();
                             parInformationPage.Show();
                             //this.Hide();
@@ -111,10 +108,5 @@ namespace Kelompok_D
             }
         }
 
-        private void txtNIM_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = true;
-            if (char.IsNumber(e.KeyChar) || e.KeyChar == (char)Keys.Back) e.Handled = false;
-        }
     }
 }

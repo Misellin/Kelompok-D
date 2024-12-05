@@ -57,3 +57,8 @@ D:\UPH\Project semester 4\Kelompok D\Kelompok D\obj\Debug\Kelompok D.csproj.Up2D
 D:\UPH\Project semester 4\Kelompok D\Kelompok D\obj\Debug\Kelompok_D.ScorePage.resources
 C:\Users\Lenovo\Desktop\New folder\Kelompok-D\Kelompok D\obj\Debug\Kelompok_D.ScorePage.resources
 C:\Users\Lenovo\Desktop\New folder\Kelompok-D\Kelompok D\obj\Debug\Kelompok_D.AddPeserta.resources
+C:\Users\Lenovo\Desktop\New folder\Kelompok-D\Kelompok D\obj\Debug\Kelompok_D.EditPeserta.resources
+C:\Users\Lenovo\Desktop\New folder\Kelompok-D\Kelompok D\bin\Debug\CircularProgressBar.dll
+C:\Users\Lenovo\Desktop\New folder\Kelompok-D\Kelompok D\bin\Debug\WinFormAnimation.dll
+C:\Users\Lenovo\Desktop\New folder\Kelompok-D\Kelompok D\bin\Debug\CircularProgressBar.xml
+C:\Users\Lenovo\Desktop\New folder\Kelompok-D\Kelompok D\obj\Debug\Kelompok_D.useControl.uC_DataSoal.resources

@@ -21,42 +21,49 @@ namespace Kelompok_D
 
         private void btnSimpan_Click(object sender, EventArgs e)
         {
-            try
+            // Validasi input
+            if (string.IsNullOrEmpty(txtNIM.Text) || string.IsNullOrEmpty(txtNama.Text) || string.IsNullOrEmpty(lblPassword.Text))
             {
-                // Ambil data dari form
-                string nim = txtNIM.Text;
-                string nama = txtNama.Text;
-                string tanggal = dtpTanggal.Value.ToString("yyyy-MM-dd"); // Format tanggal menjadi yyyy-MM-dd
-                string password = lblPassword.Text;
+                MessageBox.Show("Semua kolom harus diisi!");
+                return;
+            }
 
-                // Validasi data (opsional)
-                if (string.IsNullOrEmpty(nim) || string.IsNullOrEmpty(nama) || string.IsNullOrEmpty(password))
+            // Query SQL untuk insert data
+            users user = new users()
+            {
+                Username = txtNIM.Text.Trim(),
+                Nama = txtNama.Text.Trim(),
+                Tanggal = dtpTanggal.Value.ToString("yyyy-MM-dd"),
+                Password = lblPassword.Text, // Ambil password dari label
+            };
+
+            int recCount = 0;
+
+            using (SQLiteConnection conn = new SQLiteConnection(Connection.ConnectionString))
+            {
+                conn.Open();
+                using (SQLiteTransaction trans = conn.BeginTransaction())
                 {
-                    MessageBox.Show("Harap isi semua field!");
-                    return;
+                    // Eksekusi query INSERT dengan prepared statement
+                    recCount = conn.Execute("INSERT INTO Users (Username, Nama, Tanggal, Password) VALUES (@Username, @Nama, @Tanggal, @Password)", user, trans);
+                    trans.Commit();
                 }
-
-                // Query SQL untuk insert data
-                string query = "INSERT INTO Users (Username, Nama, Tanggal, Password) VALUES (@NIM, @Nama, @Tanggal, @Password)";
-
-                // Eksekusi query dengan Dapper
-                using (IDbConnection conn = new SQLiteConnection(Connection.ConnectionString))
-                {
-                    conn.Open();
-                    conn.Execute(query, new { Username = nim, Nama = nama, Tanggal = tanggal, Password = password });
-                }
-
+            }
+            if (recCount > 0)
+            {
                 MessageBox.Show("Data berhasil disimpan!");
-
                 // Clear form (opsional)
                 txtNIM.Clear();
                 txtNama.Clear();
-                lblPassword.Text = string.Empty;
+                lblPassword.Text = ""; // Clear label password
+                DialogResult = DialogResult.OK;
+
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("Error: " + ex.Message);
+                MessageBox.Show("Gagal menyimpan data!");
             }
+
 
         }
 
@@ -70,7 +77,7 @@ namespace Kelompok_D
         }
 
         // Fungsi untuk menggenerate password acak
-        private string GenerateRandomPassword(int length = 8)
+        public static string GenerateRandomPassword(int length = 8)
         {
             const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
             var random = new Random();
@@ -78,5 +85,10 @@ namespace Kelompok_D
               .Select(s => s[random.Next(s.Length)]).ToArray());
         }
 
+        private void txtNIM_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+            if (char.IsNumber(e.KeyChar) || e.KeyChar == (char)Keys.Back) e.Handled = false;
+        }
     }
 }
