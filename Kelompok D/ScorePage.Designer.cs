@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.panel3 = new System.Windows.Forms.Panel();
+            this.lblScore = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.lblResult = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
@@ -37,9 +40,6 @@
             this.lblSUO = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -47,9 +47,9 @@
             // panel3
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.label8);
+            this.panel3.Controls.Add(this.lblScore);
             this.panel3.Controls.Add(this.label7);
-            this.panel3.Controls.Add(this.label6);
+            this.panel3.Controls.Add(this.lblResult);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.button4);
@@ -57,6 +57,36 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(707, 288);
             this.panel3.TabIndex = 27;
+            // 
+            // lblScore
+            // 
+            this.lblScore.AutoSize = true;
+            this.lblScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblScore.Location = new System.Drawing.Point(324, 119);
+            this.lblScore.Name = "lblScore";
+            this.lblScore.Size = new System.Drawing.Size(63, 69);
+            this.lblScore.TabIndex = 31;
+            this.lblScore.Text = "0";
+            this.lblScore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label7
+            // 
+            this.label7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label7.Location = new System.Drawing.Point(281, 97);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(142, 108);
+            this.label7.TabIndex = 30;
+            // 
+            // lblResult
+            // 
+            this.lblResult.AutoSize = true;
+            this.lblResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblResult.Location = new System.Drawing.Point(325, 58);
+            this.lblResult.Name = "lblResult";
+            this.lblResult.Size = new System.Drawing.Size(56, 25);
+            this.lblResult.TabIndex = 29;
+            this.lblResult.Text = "Pass";
+            this.lblResult.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
             // 
@@ -87,6 +117,7 @@
             this.button4.TabIndex = 20;
             this.button4.Text = "Home";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // panel1
             // 
@@ -141,36 +172,6 @@
             this.label5.Text = "Pass = 70 or above\r\nFail = below 70";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(325, 58);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(56, 25);
-            this.label6.TabIndex = 29;
-            this.label6.Text = "Pass";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label7
-            // 
-            this.label7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label7.Location = new System.Drawing.Point(281, 97);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(142, 108);
-            this.label7.TabIndex = 30;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(324, 119);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(63, 69);
-            this.label8.TabIndex = 31;
-            this.label8.Text = "0";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // ScorePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -187,6 +188,7 @@
             this.Name = "ScorePage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ScorePage";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -205,9 +207,9 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblSUO;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lblScore;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblResult;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
     }

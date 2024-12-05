@@ -69,6 +69,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddPeserta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddPeserta.Designer.cs">
+      <DependentUpon>AddPeserta.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +134,9 @@
       <DependentUpon>UserPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Users.cs" />
+    <EmbeddedResource Include="AddPeserta.resx">
+      <DependentUpon>AddPeserta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminPage.resx">
       <DependentUpon>AdminPage.cs</DependentUpon>
     </EmbeddedResource>

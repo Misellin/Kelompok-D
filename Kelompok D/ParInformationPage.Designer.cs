@@ -33,11 +33,11 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.button4 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.lblSUO = new System.Windows.Forms.Label();
@@ -99,6 +99,17 @@
             this.textBox2.Size = new System.Drawing.Size(472, 34);
             this.textBox2.TabIndex = 8;
             // 
+            // button4
+            // 
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(241, 229);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(190, 41);
+            this.button4.TabIndex = 10;
+            this.button4.Text = "Next";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // textBox1
             // 
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -134,17 +145,6 @@
             this.label3.Size = new System.Drawing.Size(0, 16);
             this.label3.TabIndex = 4;
             // 
-            // button4
-            // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(247, 229);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(190, 41);
-            this.button4.TabIndex = 10;
-            this.button4.Text = "Start Exam";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -179,7 +179,7 @@
             // label7
             // 
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(120, 418);
+            this.label7.Location = new System.Drawing.Point(135, 418);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(667, 22);
             this.label7.TabIndex = 13;

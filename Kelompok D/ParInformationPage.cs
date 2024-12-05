@@ -19,7 +19,8 @@ namespace Kelompok_D
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            ExamPage exam = new ExamPage();
+            exam.Show();
         }
     }
 }
