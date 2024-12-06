@@ -83,8 +83,7 @@ namespace Kelompok_D
         }
         private bool ValidateInput(string nim, string password)
         {
-            // Implementasi validasi input di sini
-            // ... (Contoh validasi seperti pada jawaban sebelumnya)
+
 
             return true;
         }

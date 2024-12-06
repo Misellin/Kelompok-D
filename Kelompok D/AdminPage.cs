@@ -23,10 +23,6 @@ namespace Kelompok_D
         public AdminPage()
         {
             InitializeComponent();
-            //pnlDataPeserta.Location = new Point(213, 128);
-            //pnlDataSoal.Location = new Point(213, 128);
-            //pnlDataSoal.Visible = false;
-            //pnlLaporan.Visible = false;
             //Data Peserta
             typeof(DataGridView).InvokeMember(
                 "DoubleBuffered",
@@ -41,7 +37,7 @@ namespace Kelompok_D
             dgvUsers.Columns[3].DataPropertyName = nameof(users.Tanggal);
             dgvUsers.Columns[4].DataPropertyName = nameof(users.Password);
 
-            LoadDataPeserta(); // Panggil LoadData saat form dibuka
+            LoadDataPeserta(); 
 
             //Laporan
             typeof(DataGridView).InvokeMember(
@@ -78,6 +74,7 @@ namespace Kelompok_D
 
 
         }
+
         //DataPeserta
         private void LoadDataPeserta()
         {
@@ -102,9 +99,7 @@ namespace Kelompok_D
                     {
                         query += "AND Gender = 'Wanita' ";
                     }
-                    // Jika kedua checkbox dicentang atau tidak dicentang, tidak ada filter gender
 
-                    // Urutkan data
                     query += "ORDER BY Username ASC";
 
                     // Parameter query
@@ -143,9 +138,9 @@ namespace Kelompok_D
         private void btnTambah_Click(object sender, EventArgs e)
         {
             AddPeserta addPeserta = new AddPeserta();
-            if (addPeserta.ShowDialog() == DialogResult.OK) // Cek apakah form ditutup dengan OK
+            if (addPeserta.ShowDialog() == DialogResult.OK)
             {
-                LoadDataPeserta(); // Refresh DataGridView setelah tambah data
+                LoadDataPeserta();
             }
         }
 
@@ -232,25 +227,25 @@ namespace Kelompok_D
 
                     // Query untuk mengambil data laporan dengan filter
                     string query = @"
-                SELECT 
-                    u.Username, 
-                    u.Nama, 
-                    u.Tanggal,
-                    l.Benar, 
-                    l.Salah, 
-                    l.Nilai, 
-                    l.Status, 
-                    l.LamaUjian
-                FROM 
-                    laporan l
-                INNER JOIN 
-                    Users u ON l.UserID = u.UserID
-                WHERE 1=1 "; // Trik agar mudah menambahkan filter
+                        SELECT 
+                            u.Username, 
+                            u.Nama, 
+                            u.Tanggal,
+                            l.Benar, 
+                            l.Salah, 
+                            l.Nilai, 
+                            l.Status, 
+                            l.LamaUjian
+                        FROM 
+                            laporan l
+                        INNER JOIN 
+                            Users u ON l.UserID = u.UserID
+                        WHERE 1=1 ";
 
                     // Tambahkan filter NIM
                     if (!string.IsNullOrEmpty(filterNIM))
                     {
-                        query += "AND u.Username     LIKE @NIM ";
+                        query += "AND u.Username LIKE @NIM ";
                     }
 
                     // Tambahkan filter Nama
@@ -294,7 +289,7 @@ namespace Kelompok_D
             string status = "";
             if (chkPassed.Checked && chkFailed.Checked)
             {
-                status = ""; // Jika keduanya dicentang, tampilkan semua status
+                status = "";
             }
             else if (chkPassed.Checked)
             {
@@ -308,6 +303,7 @@ namespace Kelompok_D
             // Panggil LoadDataLaporan dengan parameter filter
             LoadDataLaporan(nim, nama, status);
         }
+
         //Data Soal
         private void LoadDataSoal(string topik)
         {
@@ -375,9 +371,9 @@ namespace Kelompok_D
         {
             AddSoal addSoal = new AddSoal();
             addSoal.ShowDialog();
-            if (addSoal.ShowDialog() == DialogResult.OK) // Cek apakah form ditutup dengan OK
+            if (addSoal.ShowDialog() == DialogResult.OK)
             {
-                LoadDataSoal(cboTopik.SelectedItem.ToString()); // Refresh DataGridView setelah tambah data
+                LoadDataSoal(cboTopik.SelectedItem.ToString());
             }
         }
 
@@ -417,7 +413,7 @@ namespace Kelompok_D
                 EditSoal editSoal = new EditSoal(soal);
                 if (editSoal.ShowDialog() == DialogResult.OK)
                 {
-                    LoadDataSoal(cboTopik.SelectedItem.ToString()); // Refresh DataGridView
+                    LoadDataSoal(cboTopik.SelectedItem.ToString());
                 }
 
             }

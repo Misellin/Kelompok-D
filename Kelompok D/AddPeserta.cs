@@ -51,7 +51,7 @@ namespace Kelompok_D
                 if (count > 0)
                 {
                     MessageBox.Show("NIM sudah terdaftar!");
-                    return; // Hentikan proses penyimpanan
+                    return;
                 }
 
                 using (SQLiteTransaction trans = conn.BeginTransaction())
@@ -65,10 +65,9 @@ namespace Kelompok_D
             if (recCount > 0)
             {
                 MessageBox.Show("Data berhasil disimpan!");
-                // Clear form (opsional)
                 txtNIM.Clear();
                 txtNama.Clear();
-                lblPassword.Text = ""; // Clear label password
+                lblPassword.Text = ""; 
                 DialogResult = DialogResult.OK;
 
             }
@@ -82,10 +81,8 @@ namespace Kelompok_D
 
         private void btnGeneratePass_Click(object sender, EventArgs e)
         {
-            // Generate password acak
             string password = GenerateRandomPassword();
 
-            // Tampilkan password di label
             lblPassword.Text = password;
         }
 

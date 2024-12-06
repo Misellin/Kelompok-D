@@ -29,10 +29,9 @@ namespace Kelompok_D
             try
             {
                 // 1. Ambil data dari form
-                string topik = txtTopik.Text; // Ambil topik dari ComboBox
+                string topik = txtTopik.Text; 
                 string soal = txtSoal.Text;
 
-                // Ambil pilihan jawaban dan gabungkan dengan ;
                 string pilihan = string.Join(";", new string[] {
                     txtPilihanA.Text,
                     txtPilihanB.Text,
@@ -61,7 +60,7 @@ namespace Kelompok_D
                 jawaban = jawaban.TrimEnd(';');
 
 
-                // 2. Validasi data (opsional)
+                // 2. Validasi data
                 if (string.IsNullOrEmpty(soal) || string.IsNullOrEmpty(pilihan) || string.IsNullOrEmpty(jawaban))
                 {
                     MessageBox.Show("Harap isi semua field!");

@@ -17,10 +17,10 @@ namespace Kelompok_D
         public List<sooal> daftarSoal;
         private int currentSoalIndex;
         public Timer examTimer;
-        public TimeSpan timeElapsed { get; private set; } // Properti untuk menyimpan lama ujian
+        public TimeSpan timeElapsed { get; private set; }
         private int timeLeft;
-        public List<string> jawabanUser; // List untuk menyimpan jawaban user
-        private List<bool> soalDiragukan; // List untuk menyimpan status "doubt"
+        public List<string> jawabanUser;
+        private List<bool> soalDiragukan;
         private Button[] buttons;
 
         public ExamPage()
@@ -29,13 +29,13 @@ namespace Kelompok_D
             LoadSoal();
             label14.Text = Home.currentUserID.ToString();
             currentSoalIndex = 0;
-            timeLeft = 60 * 60; // 60 menit
+            timeLeft = 60 * 60;
 
             jawabanUser = new List<string>();
             soalDiragukan = new List<bool>();
             for (int i = 0; i < daftarSoal.Count; i++)
             {
-                jawabanUser.Add(""); // Isi dengan string kosong
+                jawabanUser.Add("");
                 soalDiragukan.Add(false);
             }
 
@@ -53,7 +53,7 @@ namespace Kelompok_D
             btnPrevious.Visible = false;
             StartTimer();
             DisplaySoal();
-            UpdateQuestionList(); // Panggil UpdateQuestionList di sini
+            UpdateQuestionList(); 
         }
 
         private void LoadSoal()
@@ -161,15 +161,15 @@ namespace Kelompok_D
                     // Tentukan status jawaban dan atur warna button
                     if (soalDiragukan[i])
                     {
-                        btnSoal.BackColor = Color.Orange; // Soal diragukan
+                        btnSoal.BackColor = Color.Orange;
                     }
                     else if (!string.IsNullOrEmpty(jawabanUser[i]))
                     {
-                        btnSoal.BackColor = Color.Green; // Soal sudah dijawab
+                        btnSoal.BackColor = Color.Green;
                     }
                     else
                     {
-                        btnSoal.BackColor = SystemColors.Control; // Soal belum dijawab
+                        btnSoal.BackColor = SystemColors.Control;
                     }
 
                 }
@@ -329,7 +329,7 @@ namespace Kelompok_D
         {
             if (currentSoalIndex >= 0 && currentSoalIndex < soalDiragukan.Count)
             {
-                soalDiragukan[currentSoalIndex] = !soalDiragukan[currentSoalIndex]; // Toggle status "doubt"
+                soalDiragukan[currentSoalIndex] = !soalDiragukan[currentSoalIndex];
                 UpdateQuestionList();
             }
         }
@@ -375,10 +375,8 @@ namespace Kelompok_D
             for (int i = 0; i < totalSoal; i++)
             {
                 sooal soal = daftarSoal[i];
-                // Ubah jawaban benar menjadi List<string>
                 List<string> jawabanBenarList = soal.Jawaban.Split(';').ToList();
 
-                // Ubah jawaban user menjadi List<string>
                 List<string> jawabanUserList = jawabanUser[i].TrimEnd(';').Split(';').ToList();
 
                 // Normalisasi dan urutkan jawaban
@@ -398,7 +396,6 @@ namespace Kelompok_D
             return new ExamResult(nilai, lulus);
         }
 
-        // Fungsi NormalizeJawaban untuk List<string>
         public static List<string> NormalizeJawaban(List<string> jawaban)
         {
             if (jawaban == null || jawaban.Count == 0)
@@ -406,10 +403,8 @@ namespace Kelompok_D
                 return new List<string>();
             }
 
-            // 1. Hapus spasi di awal/akhir dan ubah ke huruf kecil
             jawaban = jawaban.Select(j => j.Trim().ToLower()).ToList();
 
-            // 2. Urutkan pilihan jawaban
             jawaban.Sort();
 
             return jawaban;
@@ -452,27 +447,25 @@ namespace Kelompok_D
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (soalDiragukan.Any(d => d)) // Cek apakah ada elemen true di soalDiragukan
+            if (soalDiragukan.Any(d => d)) 
             {
                 MessageBox.Show("Masih ada soal yang di-doubt. Silakan periksa kembali.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return; // Jangan lanjutkan submit
+                return; 
             }
             else
             {
                 if (timeLeft > 0)
                 {
-                    //// Waktu belum habis, buka KonfirmasiPage
-                    FinishedForm konfirmasiForm = new FinishedForm(this); // Kirim instance ExamPage ke FinishedForm
+                    FinishedForm konfirmasiForm = new FinishedForm(this); 
                     konfirmasiForm.ShowDialog();
 
                 }
                 else
                 {
-                    // Waktu habis, submit jawaban
-                    examTimer.Stop(); // Hentikan timer
+                    examTimer.Stop();
                     ExamResult result = ExamResultChecker.CheckResult(daftarSoal, jawabanUser);
 
-                    ScorePage scorePage = new ScorePage(result); // Pass objek ExamResult ke ScorePage
+                    ScorePage scorePage = new ScorePage(result); 
                     scorePage.Show();
                 }
             }

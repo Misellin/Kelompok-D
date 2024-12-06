@@ -16,7 +16,7 @@ namespace Kelompok_D
 {
     public partial class FinishedForm : Form
     {
-        private ExamPage examPage; // Variabel untuk menyimpan instance ExamPage
+        private ExamPage examPage; 
 
         public FinishedForm(ExamPage examPage)
         {
@@ -63,7 +63,6 @@ namespace Kelompok_D
                     }
                 }
 
-                // Ambil lama ujian dari ExamPage (asumsikan ada properti timeElapsed di ExamPage)
                 TimeSpan timeElapsed = examPage.timeElapsed;
                 string lamaUjian = $"{timeElapsed.Hours:D2}:{timeElapsed.Minutes:D2}:{timeElapsed.Seconds:D2}";
                 int userID = Home.currentUserID;
@@ -80,7 +79,7 @@ namespace Kelompok_D
                     // Eksekusi query dengan Dapper
                     conn.Execute(query, new
                     {
-                        UserID = userID, // Ganti dengan cara Anda mendapatkan UserID
+                        UserID = userID,
                         Benar = jumlahBenar,
                         Salah = jumlahSalah,
                         Nilai = result.Nilai,
@@ -93,7 +92,6 @@ namespace Kelompok_D
                 ScorePage scorePage = new ScorePage(result);
                 scorePage.Show();
 
-                // Tutup form
                 //this.Close();
                 //examPage.Close(); // Tutup ExamPage
             }
