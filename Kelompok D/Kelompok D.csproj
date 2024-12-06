@@ -85,6 +85,12 @@
     <Compile Include="AddPeserta.Designer.cs">
       <DependentUpon>AddPeserta.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddSoal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddSoal.Designer.cs">
+      <DependentUpon>AddSoal.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +104,12 @@
     </Compile>
     <Compile Include="EditPeserta.Designer.cs">
       <DependentUpon>EditPeserta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditSoal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditSoal.Designer.cs">
+      <DependentUpon>EditSoal.cs</DependentUpon>
     </Compile>
     <Compile Include="ExamPage.cs">
       <SubType>Form</SubType>
@@ -162,11 +174,17 @@
     <EmbeddedResource Include="AddPeserta.resx">
       <DependentUpon>AddPeserta.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddSoal.resx">
+      <DependentUpon>AddSoal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminPage.resx">
       <DependentUpon>AdminPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditPeserta.resx">
       <DependentUpon>EditPeserta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditSoal.resx">
+      <DependentUpon>EditSoal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ExamPage.resx">
       <DependentUpon>ExamPage.cs</DependentUpon>

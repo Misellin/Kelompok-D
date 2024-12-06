@@ -62,3 +62,5 @@ C:\Users\Lenovo\Desktop\New folder\Kelompok-D\Kelompok D\bin\Debug\CircularProgr
 C:\Users\Lenovo\Desktop\New folder\Kelompok-D\Kelompok D\bin\Debug\WinFormAnimation.dll
 C:\Users\Lenovo\Desktop\New folder\Kelompok-D\Kelompok D\bin\Debug\CircularProgressBar.xml
 C:\Users\Lenovo\Desktop\New folder\Kelompok-D\Kelompok D\obj\Debug\Kelompok_D.useControl.uC_DataSoal.resources
+C:\Users\Lenovo\Desktop\New folder\Kelompok-D\Kelompok D\obj\Debug\Kelompok_D.AddSoal.resources
+C:\Users\Lenovo\Desktop\New folder\Kelompok-D\Kelompok D\obj\Debug\Kelompok_D.EditSoal.resources

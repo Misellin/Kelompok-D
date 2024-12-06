@@ -26,6 +26,15 @@ namespace Kelompok_D
             txtNama.Text = user.Nama;
             dtpTanggal.Value = DateTime.Parse(user.Tanggal);
             lblPassword.Text = user.Password;
+
+            if (user.Gender == "Pria")
+            {
+                rbPria.Checked = true;
+            }
+            else
+            {
+                rbWanita.Checked = true;
+            }
         }
 
         private void btnSimpan_Click(object sender, EventArgs e)
@@ -37,6 +46,7 @@ namespace Kelompok_D
                 string nama = txtNama.Text.Trim();
                 string tanggal = dtpTanggal.Value.ToString("yyyy-MM-dd");
                 string password = lblPassword.Text; // Ambil password dari label
+                string jenisKelamin = rbPria.Checked ? "Pria" : "Wanita";
 
                 // 2. Validasi data
                 if (string.IsNullOrEmpty(nim) || string.IsNullOrEmpty(nama) || string.IsNullOrEmpty(password))
@@ -45,26 +55,48 @@ namespace Kelompok_D
                     return;
                 }
 
-                // 3. Query SQL untuk update data
-                string query = "UPDATE Users SET Username = @NIM, Nama = @Nama, Tanggal = @Tanggal, Password = @Password WHERE UserID = @UserID";
-
-                // 4. Eksekusi query dengan Dapper
+                // 3. Pengecekan NIM (pastikan NIM unik)
                 using (IDbConnection conn = new SQLiteConnection(Connection.ConnectionString))
                 {
                     conn.Open();
-                    conn.Execute(query, new
+                    string checkQuery = "SELECT COUNT(*) FROM Users WHERE Username = @NIM AND UserID != @UserID"; // Perhatikan NIM = @NIM
+                    int count = conn.QuerySingle<int>(checkQuery, new { NIM = nim, UserID = user.UserID });
+                    if (count > 0)
                     {
-                        NIM = nim,
-                        Nama = nama,
-                        Tanggal = tanggal,
-                        Password = password,
-                        UserID = user.UserID // Gunakan UserID dari objek user yang diterima di konstruktor
-                    });
+                        MessageBox.Show("NIM sudah terdaftar!");
+                        return;
+                    }
+                }
+
+
+                // 4. Buat objek users untuk update data
+                users updatedUser = new users()
+                {
+                    UserID = user.UserID, // ID user yang akan diupdate
+                    Username = nim,
+                    Nama = nama,
+                    Tanggal = tanggal,
+                    Password = password,
+                    Gender = jenisKelamin
+                };
+
+                // 5. Eksekusi query UPDATE dengan prepared statement
+                using (SQLiteConnection conn = new SQLiteConnection(Connection.ConnectionString))
+                {
+                    conn.Open();
+                    using (SQLiteTransaction trans = conn.BeginTransaction())
+                    {
+                        // Query SQL untuk update data
+                        string query = "UPDATE Users SET Username = @Username, Nama = @Nama, Tanggal = @Tanggal, Password = @Password, Gender = @Gender WHERE UserID = @UserID";
+
+                        conn.Execute(query, updatedUser, trans);
+                        trans.Commit();
+                    }
                 }
 
                 MessageBox.Show("Data berhasil diupdate!");
 
-                // 5. Set DialogResult dan tutup form
+                // 6. Set DialogResult dan tutup form
                 this.DialogResult = DialogResult.OK;
                 this.Close();
             }

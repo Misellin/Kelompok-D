@@ -39,6 +39,8 @@
             this.btnSimpan = new System.Windows.Forms.Button();
             this.lblPassword = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.rbPria = new System.Windows.Forms.RadioButton();
+            this.rbWanita = new System.Windows.Forms.RadioButton();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -125,7 +127,7 @@
             // 
             // btnSimpan
             // 
-            this.btnSimpan.Location = new System.Drawing.Point(191, 172);
+            this.btnSimpan.Location = new System.Drawing.Point(200, 222);
             this.btnSimpan.Name = "btnSimpan";
             this.btnSimpan.Size = new System.Drawing.Size(93, 30);
             this.btnSimpan.TabIndex = 43;
@@ -139,7 +141,6 @@
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(142, 20);
             this.lblPassword.TabIndex = 44;
-            this.lblPassword.Text = "label1";
             // 
             // panel1
             // 
@@ -151,11 +152,35 @@
             this.panel1.Size = new System.Drawing.Size(226, 24);
             this.panel1.TabIndex = 45;
             // 
+            // rbPria
+            // 
+            this.rbPria.AutoSize = true;
+            this.rbPria.Location = new System.Drawing.Point(117, 174);
+            this.rbPria.Name = "rbPria";
+            this.rbPria.Size = new System.Drawing.Size(52, 20);
+            this.rbPria.TabIndex = 46;
+            this.rbPria.TabStop = true;
+            this.rbPria.Text = "Pria";
+            this.rbPria.UseVisualStyleBackColor = true;
+            // 
+            // rbWanita
+            // 
+            this.rbWanita.AutoSize = true;
+            this.rbWanita.Location = new System.Drawing.Point(223, 174);
+            this.rbWanita.Name = "rbWanita";
+            this.rbWanita.Size = new System.Drawing.Size(70, 20);
+            this.rbWanita.TabIndex = 47;
+            this.rbWanita.TabStop = true;
+            this.rbWanita.Text = "Wanita";
+            this.rbWanita.UseVisualStyleBackColor = true;
+            // 
             // AddPeserta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(487, 219);
+            this.ClientSize = new System.Drawing.Size(487, 269);
+            this.Controls.Add(this.rbWanita);
+            this.Controls.Add(this.rbPria);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnSimpan);
             this.Controls.Add(this.dtpTanggal);
@@ -191,5 +216,7 @@
         private System.Windows.Forms.Button btnSimpan;
         private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.RadioButton rbPria;
+        private System.Windows.Forms.RadioButton rbWanita;
     }
 }

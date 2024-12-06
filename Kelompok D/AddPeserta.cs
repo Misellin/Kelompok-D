@@ -33,8 +33,9 @@ namespace Kelompok_D
             {
                 Username = txtNIM.Text.Trim(),
                 Nama = txtNama.Text.Trim(),
+                Gender = rbPria.Checked ? "Pria" : "Wanita",
                 Tanggal = dtpTanggal.Value.ToString("yyyy-MM-dd"),
-                Password = lblPassword.Text, // Ambil password dari label
+                Password = lblPassword.Text,
             };
 
             int recCount = 0;
@@ -42,13 +43,25 @@ namespace Kelompok_D
             using (SQLiteConnection conn = new SQLiteConnection(Connection.ConnectionString))
             {
                 conn.Open();
+
+                // Query untuk mengecek apakah username sudah ada
+                string checkQuery = "SELECT COUNT(*) FROM Users WHERE Username = @Username";
+                int count = conn.QuerySingle<int>(checkQuery, new { Username = user.Username });
+
+                if (count > 0)
+                {
+                    MessageBox.Show("NIM sudah terdaftar!");
+                    return; // Hentikan proses penyimpanan
+                }
+
                 using (SQLiteTransaction trans = conn.BeginTransaction())
                 {
                     // Eksekusi query INSERT dengan prepared statement
-                    recCount = conn.Execute("INSERT INTO Users (Username, Nama, Tanggal, Password) VALUES (@Username, @Nama, @Tanggal, @Password)", user, trans);
+                    recCount = conn.Execute("INSERT INTO Users (Username, Nama, Tanggal, Password, Gender) VALUES (@Username, @Nama, @Tanggal, @Password, @Gender)", user, trans);
                     trans.Commit();
                 }
             }
+
             if (recCount > 0)
             {
                 MessageBox.Show("Data berhasil disimpan!");

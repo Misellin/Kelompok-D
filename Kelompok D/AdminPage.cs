@@ -18,6 +18,7 @@ namespace Kelompok_D
 {
     public partial class AdminPage : Form
     {
+        
         useControl.uC_DataSoal DataSoal = new useControl.uC_DataSoal();
         public AdminPage()
         {
@@ -86,21 +87,35 @@ namespace Kelompok_D
                 {
                     conn.Open();
 
-                    // Query untuk mengambil data User dengan filter
-                    string query = "SELECT * FROM Users " +
-                                   "WHERE Role = 'peserta' " +
-                                   "AND Username LIKE @Username " +
-                                   "AND Nama LIKE @Nama " +
-                                   //"AND Tanggal = @Tanggal " + // Tambahkan filter tanggal
-                                   "ORDER BY Username ASC";
+                    // Query dasar
+                    string query = "SELECT * FROM Users WHERE Role = 'peserta' ";
 
-                    // Jalankan query dengan Dapper
-                    var users = conn.Query<users>(query, new
+                    // Tambahkan filter NIM dan Nama
+                    query += "AND Username LIKE @Username AND Nama LIKE @Nama ";
+
+                    // Tambahkan filter Gender jika diperlukan
+                    if (chkPria.Checked && !chkWanita.Checked)
+                    {
+                        query += "AND Gender = 'Pria' ";
+                    }
+                    else if (!chkPria.Checked && chkWanita.Checked)
+                    {
+                        query += "AND Gender = 'Wanita' ";
+                    }
+                    // Jika kedua checkbox dicentang atau tidak dicentang, tidak ada filter gender
+
+                    // Urutkan data
+                    query += "ORDER BY Username ASC";
+
+                    // Parameter query
+                    var parameters = new
                     {
                         Username = txtFilterNIM.Text.Trim() + "%",
-                        Nama = txtFilterNama.Text.Trim() + "%",
-                        Tanggal = dtpFilterTanggal.Value.ToString("yyyy-MM-dd") // Ambil nilai dari DateTimePicker
-                    }).AsList();
+                        Nama = txtFilterNama.Text.Trim() + "%"
+                    };
+
+                    // Jalankan query dengan Dapper
+                    var users = conn.Query<users>(query, parameters).AsList();
 
                     // Tampilkan data di DataGridView
                     dgvUsers.DataSource = users;
@@ -110,7 +125,6 @@ namespace Kelompok_D
             {
                 MessageBox.Show("Error: " + ex.Message);
             }
-
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -120,6 +134,7 @@ namespace Kelompok_D
             {
                 Home homePage = new Home();
                 homePage.Show();
+                homePage.btnLoginpage_Click(null, EventArgs.Empty);
                 this.Close();
             }                
         }
@@ -203,11 +218,7 @@ namespace Kelompok_D
             }
         }
 
-        private void dtpFilterTanggal_ValueChanged(object sender, EventArgs e)
-        {
-            dtpFilterTanggal.Format = DateTimePickerFormat.Custom;
-            dtpFilterTanggal.CustomFormat = "yyyy-MM-dd";
-        }
+
 
 
         //Laporan
@@ -280,7 +291,19 @@ namespace Kelompok_D
             // Ambil nilai filter dari kontrol
             string nim = txtFilterNIM.Text.Trim();
             string nama = txtFilterNama.Text.Trim();
-            string status = radPassed.Checked ? "Pass" : (radFailed.Checked ? "Fail" : ""); // Ternary operator
+            string status = "";
+            if (chkPassed.Checked && chkFailed.Checked)
+            {
+                status = ""; // Jika keduanya dicentang, tampilkan semua status
+            }
+            else if (chkPassed.Checked)
+            {
+                status = "Pass";
+            }
+            else if (chkFailed.Checked)
+            {
+                status = "Fail";
+            }
 
             // Panggil LoadDataLaporan dengan parameter filter
             LoadDataLaporan(nim, nama, status);
@@ -346,6 +369,72 @@ namespace Kelompok_D
         {
             e.Handled = true;
             if (char.IsNumber(e.KeyChar) || e.KeyChar == (char)Keys.Back) e.Handled = false;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AddSoal addSoal = new AddSoal();
+            addSoal.ShowDialog();
+            if (addSoal.ShowDialog() == DialogResult.OK) // Cek apakah form ditutup dengan OK
+            {
+                LoadDataSoal(cboTopik.SelectedItem.ToString()); // Refresh DataGridView setelah tambah data
+            }
+        }
+
+        private void AdminPage_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                using (IDbConnection conn = new SQLiteConnection(Connection.ConnectionString))
+                {
+                    conn.Open();
+
+                    // Query untuk mengambil semua topik unik dari BankSoal
+                    string query = "SELECT DISTINCT Topik FROM BankSoal";
+
+                    // Jalankan query dengan Dapper
+                    var topikList = conn.Query<string>(query).ToList();
+
+                    // Tambahkan data ke ComboBox
+                    cboTopik.DataSource = topikList;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+
+        }
+        private sooal soal;
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (dgvSoal.CurrentRow != null)
+            {
+                // Ambil data soal yang dipilih
+                sooal soal = (sooal)dgvSoal.CurrentRow.DataBoundItem;
+
+                // Buka EditSoal dan kirim data soal
+                EditSoal editSoal = new EditSoal(soal);
+                if (editSoal.ShowDialog() == DialogResult.OK)
+                {
+                    LoadDataSoal(cboTopik.SelectedItem.ToString()); // Refresh DataGridView
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Pilih soal yang ingin diedit.");
+            }
+        }
+
+        private void radFailed_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radPassed_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

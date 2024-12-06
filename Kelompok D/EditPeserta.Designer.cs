@@ -39,12 +39,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lblPassword = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.rbWanita = new System.Windows.Forms.RadioButton();
+            this.rbPria = new System.Windows.Forms.RadioButton();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnSimpan
             // 
-            this.btnSimpan.Location = new System.Drawing.Point(193, 170);
+            this.btnSimpan.Location = new System.Drawing.Point(195, 212);
             this.btnSimpan.Name = "btnSimpan";
             this.btnSimpan.Size = new System.Drawing.Size(93, 30);
             this.btnSimpan.TabIndex = 54;
@@ -150,11 +152,35 @@
             this.panel1.Size = new System.Drawing.Size(226, 24);
             this.panel1.TabIndex = 55;
             // 
+            // rbWanita
+            // 
+            this.rbWanita.AutoSize = true;
+            this.rbWanita.Location = new System.Drawing.Point(225, 167);
+            this.rbWanita.Name = "rbWanita";
+            this.rbWanita.Size = new System.Drawing.Size(70, 20);
+            this.rbWanita.TabIndex = 57;
+            this.rbWanita.TabStop = true;
+            this.rbWanita.Text = "Wanita";
+            this.rbWanita.UseVisualStyleBackColor = true;
+            // 
+            // rbPria
+            // 
+            this.rbPria.AutoSize = true;
+            this.rbPria.Location = new System.Drawing.Point(119, 167);
+            this.rbPria.Name = "rbPria";
+            this.rbPria.Size = new System.Drawing.Size(52, 20);
+            this.rbPria.TabIndex = 56;
+            this.rbPria.TabStop = true;
+            this.rbPria.Text = "Pria";
+            this.rbPria.UseVisualStyleBackColor = true;
+            // 
             // EditPeserta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(487, 219);
+            this.ClientSize = new System.Drawing.Size(487, 254);
+            this.Controls.Add(this.rbWanita);
+            this.Controls.Add(this.rbPria);
             this.Controls.Add(this.btnSimpan);
             this.Controls.Add(this.dtpTanggal);
             this.Controls.Add(this.label6);
@@ -189,5 +215,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.RadioButton rbWanita;
+        private System.Windows.Forms.RadioButton rbPria;
     }
 }
