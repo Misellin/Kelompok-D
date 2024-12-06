@@ -36,31 +36,31 @@
             this.btnOut = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pnlLogin = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.txtNIM = new System.Windows.Forms.TextBox();
+            this.btnLogin = new System.Windows.Forms.Button();
+            this.cbShowPass = new System.Windows.Forms.CheckBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.txtPassword = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pnlHomepage = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.txtPassword = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.cbShowPass = new System.Windows.Forms.CheckBox();
-            this.btnLogin = new System.Windows.Forms.Button();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.txtNIM = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.pnlLogin.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel9.SuspendLayout();
+            this.panel7.SuspendLayout();
+            this.panel8.SuspendLayout();
             this.panel3.SuspendLayout();
             this.pnlHomepage.SuspendLayout();
-            this.panel9.SuspendLayout();
-            this.panel8.SuspendLayout();
-            this.panel7.SuspendLayout();
-            this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -79,6 +79,7 @@
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.SystemColors.Control;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label1);
@@ -130,6 +131,7 @@
             this.btnOut.Name = "btnOut";
             this.btnOut.Size = new System.Drawing.Size(161, 54);
             this.btnOut.TabIndex = 0;
+            this.btnOut.TabStop = false;
             this.btnOut.Text = "Out";
             this.btnOut.UseVisualStyleBackColor = true;
             this.btnOut.Click += new System.EventHandler(this.btnOut_Click);
@@ -161,6 +163,146 @@
             this.pnlLogin.TabIndex = 15;
             this.pnlLogin.Visible = false;
             // 
+            // panel6
+            // 
+            this.panel6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel6.Controls.Add(this.label5);
+            this.panel6.Controls.Add(this.label8);
+            this.panel6.Controls.Add(this.panel9);
+            this.panel6.Location = new System.Drawing.Point(161, 68);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(792, 390);
+            this.panel6.TabIndex = 14;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(354, 7);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(95, 36);
+            this.label5.TabIndex = 24;
+            this.label5.Text = "Login";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(205, 135);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(0, 16);
+            this.label8.TabIndex = 22;
+            // 
+            // panel9
+            // 
+            this.panel9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.panel9.Controls.Add(this.panel7);
+            this.panel9.Controls.Add(this.btnLogin);
+            this.panel9.Controls.Add(this.cbShowPass);
+            this.panel9.Controls.Add(this.label6);
+            this.panel9.Controls.Add(this.label7);
+            this.panel9.Controls.Add(this.panel8);
+            this.panel9.Location = new System.Drawing.Point(58, 35);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(675, 345);
+            this.panel9.TabIndex = 23;
+            // 
+            // panel7
+            // 
+            this.panel7.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.panel7.BackColor = System.Drawing.Color.White;
+            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel7.Controls.Add(this.txtNIM);
+            this.panel7.Location = new System.Drawing.Point(154, 88);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(472, 34);
+            this.panel7.TabIndex = 24;
+            // 
+            // txtNIM
+            // 
+            this.txtNIM.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtNIM.BackColor = System.Drawing.Color.White;
+            this.txtNIM.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNIM.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.txtNIM.Location = new System.Drawing.Point(6, 4);
+            this.txtNIM.Multiline = true;
+            this.txtNIM.Name = "txtNIM";
+            this.txtNIM.Size = new System.Drawing.Size(450, 25);
+            this.txtNIM.TabIndex = 1;
+            this.txtNIM.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNIM_KeyPress);
+            // 
+            // btnLogin
+            // 
+            this.btnLogin.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnLogin.BackColor = System.Drawing.SystemColors.Control;
+            this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnLogin.Location = new System.Drawing.Point(287, 211);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(138, 41);
+            this.btnLogin.TabIndex = 3;
+            this.btnLogin.Text = "Login";
+            this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            // 
+            // cbShowPass
+            // 
+            this.cbShowPass.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.cbShowPass.AutoSize = true;
+            this.cbShowPass.Location = new System.Drawing.Point(154, 179);
+            this.cbShowPass.Name = "cbShowPass";
+            this.cbShowPass.Size = new System.Drawing.Size(125, 20);
+            this.cbShowPass.TabIndex = 0;
+            this.cbShowPass.Text = "Show Password";
+            this.cbShowPass.UseVisualStyleBackColor = true;
+            this.cbShowPass.CheckedChanged += new System.EventHandler(this.cbShowPass_CheckedChanged_1);
+            // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(31, 139);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(117, 25);
+            this.label6.TabIndex = 21;
+            this.label6.Text = "Password";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label7
+            // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(36, 93);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(112, 25);
+            this.label7.TabIndex = 20;
+            this.label7.Text = "NIM";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // panel8
+            // 
+            this.panel8.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.panel8.BackColor = System.Drawing.Color.White;
+            this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel8.Controls.Add(this.txtPassword);
+            this.panel8.Location = new System.Drawing.Point(154, 137);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(472, 34);
+            this.panel8.TabIndex = 25;
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.txtPassword.Location = new System.Drawing.Point(6, 5);
+            this.txtPassword.Multiline = true;
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '•';
+            this.txtPassword.Size = new System.Drawing.Size(442, 25);
+            this.txtPassword.TabIndex = 2;
+            // 
             // panel3
             // 
             this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -176,10 +318,10 @@
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(372, 76);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
+            this.label4.Location = new System.Drawing.Point(385, 73);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(82, 29);
+            this.label4.Size = new System.Drawing.Size(90, 31);
             this.label4.TabIndex = 10;
             this.label4.Text = "Home";
             // 
@@ -207,147 +349,11 @@
             this.pnlHomepage.Size = new System.Drawing.Size(1122, 589);
             this.pnlHomepage.TabIndex = 14;
             // 
-            // panel9
-            // 
-            this.panel9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.panel9.Controls.Add(this.panel7);
-            this.panel9.Controls.Add(this.btnLogin);
-            this.panel9.Controls.Add(this.cbShowPass);
-            this.panel9.Controls.Add(this.label6);
-            this.panel9.Controls.Add(this.label7);
-            this.panel9.Controls.Add(this.panel8);
-            this.panel9.Location = new System.Drawing.Point(58, 35);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(675, 345);
-            this.panel9.TabIndex = 23;
-            // 
-            // panel8
-            // 
-            this.panel8.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.panel8.BackColor = System.Drawing.Color.White;
-            this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel8.Controls.Add(this.txtPassword);
-            this.panel8.Location = new System.Drawing.Point(154, 137);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(472, 34);
-            this.panel8.TabIndex = 25;
-            // 
-            // txtPassword
-            // 
-            this.txtPassword.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.txtPassword.Location = new System.Drawing.Point(6, 5);
-            this.txtPassword.Multiline = true;
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '•';
-            this.txtPassword.Size = new System.Drawing.Size(442, 25);
-            this.txtPassword.TabIndex = 2;
-            // 
-            // label7
-            // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(36, 93);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(112, 25);
-            this.label7.TabIndex = 20;
-            this.label7.Text = "NIM";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label6
-            // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(31, 139);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(117, 25);
-            this.label6.TabIndex = 21;
-            this.label6.Text = "Password";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // cbShowPass
-            // 
-            this.cbShowPass.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.cbShowPass.AutoSize = true;
-            this.cbShowPass.Location = new System.Drawing.Point(154, 179);
-            this.cbShowPass.Name = "cbShowPass";
-            this.cbShowPass.Size = new System.Drawing.Size(125, 20);
-            this.cbShowPass.TabIndex = 3;
-            this.cbShowPass.Text = "Show Password";
-            this.cbShowPass.UseVisualStyleBackColor = true;
-            this.cbShowPass.CheckedChanged += new System.EventHandler(this.cbShowPass_CheckedChanged_1);
-            // 
-            // btnLogin
-            // 
-            this.btnLogin.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.Location = new System.Drawing.Point(287, 211);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(138, 41);
-            this.btnLogin.TabIndex = 4;
-            this.btnLogin.Text = "Login";
-            this.btnLogin.UseVisualStyleBackColor = true;
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
-            // 
-            // panel7
-            // 
-            this.panel7.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.panel7.BackColor = System.Drawing.Color.White;
-            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel7.Controls.Add(this.txtNIM);
-            this.panel7.Location = new System.Drawing.Point(154, 88);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(472, 34);
-            this.panel7.TabIndex = 24;
-            // 
-            // txtNIM
-            // 
-            this.txtNIM.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtNIM.BackColor = System.Drawing.Color.White;
-            this.txtNIM.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtNIM.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.txtNIM.Location = new System.Drawing.Point(6, 4);
-            this.txtNIM.Multiline = true;
-            this.txtNIM.Name = "txtNIM";
-            this.txtNIM.Size = new System.Drawing.Size(450, 25);
-            this.txtNIM.TabIndex = 1;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(205, 135);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(0, 16);
-            this.label8.TabIndex = 22;
-            // 
-            // label5
-            // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(354, 7);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(95, 36);
-            this.label5.TabIndex = 24;
-            this.label5.Text = "Login";
-            // 
-            // panel6
-            // 
-            this.panel6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel6.Controls.Add(this.label5);
-            this.panel6.Controls.Add(this.label8);
-            this.panel6.Controls.Add(this.panel9);
-            this.panel6.Location = new System.Drawing.Point(161, 68);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(792, 390);
-            this.panel6.TabIndex = 14;
-            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1337, 708);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -361,17 +367,17 @@
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.pnlLogin.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.pnlHomepage.ResumeLayout(false);
-            this.panel9.ResumeLayout(false);
-            this.panel9.PerformLayout();
-            this.panel8.ResumeLayout(false);
-            this.panel8.PerformLayout();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
             this.ResumeLayout(false);
 
         }

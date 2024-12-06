@@ -117,4 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Guidelines:
+1. This exam consists of various questions in two formats: multiple-choice questions with one correct answer and multiple-choice questions with more than one correct answer. Please read each question carefully and select the most accurate answer.
+2. For questions with more than one correct answer, make sure to select all the correct answers as instructed.
+3. You have 60 minutes to complete this exam. Please use your time wisely to answer each question.
+4. We remind you to maintain honesty during the exam. If you are found cheating, such as using unauthorized aids (e.g., phone, cheat sheets) or communicating with others, the exam application will be immediately closed by the admin without further notice.
+5. Throughout the exam, please remain calm and focused on each question. A peaceful atmosphere will help you perform your best in this exam.
+
+Good luck, and we wish you success and the best results!</value>
+  </data>
 </root>

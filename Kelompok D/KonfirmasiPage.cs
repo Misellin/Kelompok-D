@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlTypes;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,13 @@ namespace Kelompok_D
         public KonfirmasiPage()
         {
             InitializeComponent();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            ExamPage exam = new ExamPage();
+            exam.Show();
+            this.Close();
         }
     }
 }

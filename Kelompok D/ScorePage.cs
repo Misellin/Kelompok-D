@@ -7,19 +7,38 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static Kelompok_D.ExamPage;
 
 namespace Kelompok_D
 {
     public partial class ScorePage : Form
     {
-        public ScorePage()
+        public ScorePage(ExamResult result)
         {
             InitializeComponent();
+            lblResult.Text = result.Lulus ? "Pass" : "Fail";
+            lblScore.Text = result.Nilai.ToString();
+            if (lblResult.Text == "Fail")
+            {
+                lblScore.ForeColor = Color.Red;
+            }
+
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e)
         {
+            Home homePage = new Home();
+            homePage.Show();
+            homePage.btnLoginpage_Click(null, EventArgs.Empty);
+            this.Close();
+        }
 
+        private void lblScore_Click(object sender, EventArgs e)
+        {
+            if (lblResult.Text == "Fail")
+            {
+                lblResult.ForeColor = Color.Red;
+            }
         }
     }
 }

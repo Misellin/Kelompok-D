@@ -17,6 +17,7 @@ namespace Kelompok_D
 {
     public partial class Home : Form
     {
+        public static int currentUserID;
         public Home()
         {
             InitializeComponent();
@@ -28,11 +29,10 @@ namespace Kelompok_D
             pnlLogin.Visible = false;
         }
 
-        private void btnLoginpage_Click(object sender, EventArgs e)
+        public void btnLoginpage_Click(object sender, EventArgs e)
         {
             pnlHomepage.Visible = false;
             pnlLogin.Visible = true;
-
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -55,6 +55,7 @@ namespace Kelompok_D
                     if (user != null)
                     {
                         MessageBox.Show("Login berhasil!");
+                        currentUserID = user.UserID;
 
                         if (user.Role == "admin")
                         {
@@ -64,6 +65,7 @@ namespace Kelompok_D
                         }
                         else if (user.Role == "peserta")
                         {
+
                             ParInformationPage parInformationPage = new ParInformationPage();
                             parInformationPage.Show();
                             //this.Hide();
@@ -76,6 +78,7 @@ namespace Kelompok_D
                 }
                 txtNIM.Clear();
                 txtPassword.Clear();
+                this.Hide();
             }
         }
         private bool ValidateInput(string nim, string password)
@@ -108,5 +111,10 @@ namespace Kelompok_D
             }
         }
 
+        private void txtNIM_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+            if (char.IsNumber(e.KeyChar) || e.KeyChar == (char)Keys.Back) e.Handled = false;
+        }
     }
 }
