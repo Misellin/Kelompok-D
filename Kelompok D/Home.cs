@@ -29,11 +29,10 @@ namespace Kelompok_D
             pnlLogin.Visible = false;
         }
 
-        private void btnLoginpage_Click(object sender, EventArgs e)
+        public void btnLoginpage_Click(object sender, EventArgs e)
         {
             pnlHomepage.Visible = false;
             pnlLogin.Visible = true;
-
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -79,6 +78,7 @@ namespace Kelompok_D
                 }
                 txtNIM.Clear();
                 txtPassword.Clear();
+                this.Hide();
             }
         }
         private bool ValidateInput(string nim, string password)

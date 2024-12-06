@@ -27,8 +27,10 @@ namespace Kelompok_D
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Home home = new Home();
-            home.Show();
+            Home homePage = new Home();
+            homePage.Show();
+            homePage.btnLoginpage_Click(null, EventArgs.Empty);
+            this.Close();
         }
 
         private void lblScore_Click(object sender, EventArgs e)

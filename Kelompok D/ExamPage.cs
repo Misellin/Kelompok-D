@@ -452,21 +452,29 @@ namespace Kelompok_D
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (timeLeft > 0)
+            if (soalDiragukan.Any(d => d)) // Cek apakah ada elemen true di soalDiragukan
             {
-                //// Waktu belum habis, buka KonfirmasiPage
-                FinishedForm konfirmasiForm = new FinishedForm(this); // Kirim instance ExamPage ke FinishedForm
-                konfirmasiForm.ShowDialog();
-
+                MessageBox.Show("Masih ada soal yang di-doubt. Silakan periksa kembali.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return; // Jangan lanjutkan submit
             }
             else
             {
-                // Waktu habis, submit jawaban
-                examTimer.Stop(); // Hentikan timer
-                ExamResult result = ExamResultChecker.CheckResult(daftarSoal, jawabanUser);
+                if (timeLeft > 0)
+                {
+                    //// Waktu belum habis, buka KonfirmasiPage
+                    FinishedForm konfirmasiForm = new FinishedForm(this); // Kirim instance ExamPage ke FinishedForm
+                    konfirmasiForm.ShowDialog();
 
-                ScorePage scorePage = new ScorePage(result); // Pass objek ExamResult ke ScorePage
-                scorePage.Show();
+                }
+                else
+                {
+                    // Waktu habis, submit jawaban
+                    examTimer.Stop(); // Hentikan timer
+                    ExamResult result = ExamResultChecker.CheckResult(daftarSoal, jawabanUser);
+
+                    ScorePage scorePage = new ScorePage(result); // Pass objek ExamResult ke ScorePage
+                    scorePage.Show();
+                }
             }
         }
     }

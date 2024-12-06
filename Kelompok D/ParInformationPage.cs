@@ -23,8 +23,10 @@ namespace Kelompok_D
 
         private void button4_Click(object sender, EventArgs e)
         {
-            KonfirmasiPage exam = new KonfirmasiPage();
-            exam.Show();
+            KonfirmasiPage kon = new KonfirmasiPage();
+
+            kon.Show();
+            this.Close();
         }
 
         private void ParInformationPage_Load(object sender, EventArgs e)

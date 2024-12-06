@@ -32,6 +32,7 @@ namespace Kelompok_D
 
         private void btnFinished_Click(object sender, EventArgs e)
         {
+            examPage.Close();
             try
             {
                 // Hentikan timer dari ExamPage

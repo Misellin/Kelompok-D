@@ -1,5 +1,6 @@
 ﻿using Dapper;
 using Guna.UI2.WinForms.Suite;
+using Microsoft.VisualBasic.ApplicationServices;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -59,6 +60,21 @@ namespace Kelompok_D
             dgvLaporan.Columns[7].DataPropertyName = nameof(laporan.LamaUjian);
             LoadDataLaporan("", "", "");
 
+            //DataSoal
+            typeof(DataGridView).InvokeMember(
+                "DoubleBuffered",
+                BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.SetProperty,
+                null,
+                dgvSoal,
+                new object[] { true });
+            dgvSoal.AutoGenerateColumns = false;
+            dgvSoal.Columns[0].DataPropertyName = nameof(banksoal.soal);
+            dgvSoal.Columns[1].DataPropertyName = nameof(banksoal.pilihan);
+            dgvSoal.Columns[2].DataPropertyName = nameof(banksoal.tipe);
+            dgvSoal.Columns[3].DataPropertyName = nameof(banksoal.jawaban);
+
+            LoadDataSoal("");
+
 
         }
         //DataPeserta
@@ -99,7 +115,13 @@ namespace Kelompok_D
 
         private void button5_Click(object sender, EventArgs e)
         {
-            Close();
+            DialogResult result = MessageBox.Show("Apakah Anda yakin ingin logout?", "Konfirmasi Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                Home homePage = new Home();
+                homePage.Show();
+                this.Close();
+            }                
         }
 
 
@@ -188,12 +210,6 @@ namespace Kelompok_D
         }
 
 
-        //DataSoal
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         //Laporan
         private void LoadDataLaporan(string filterNIM, string filterNama, string filterStatus)
         {
@@ -269,6 +285,36 @@ namespace Kelompok_D
             // Panggil LoadDataLaporan dengan parameter filter
             LoadDataLaporan(nim, nama, status);
         }
+        //Data Soal
+        private void LoadDataSoal(string topik)
+        {
+            try
+            {
+                using (IDbConnection conn = new SQLiteConnection(Connection.ConnectionString))
+                {
+                    conn.Open();
+
+                    // Query untuk mengambil data soal berdasarkan topik
+                    string query = "SELECT * FROM BankSoal WHERE Topik = @Topik";
+
+                    // Jalankan query dengan Dapper
+                    var soal = conn.Query<sooal>(query, new { Topik = topik }).AsList();
+
+                    // Tampilkan data di DataGridView
+                    dgvSoal.DataSource = soal;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+        private void cboTopik_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string topik = cboTopik.SelectedItem.ToString();
+            LoadDataSoal(topik);
+        }
+
 
         //BtnNav
         private void btnDataPeserta_Click(object sender, EventArgs e)

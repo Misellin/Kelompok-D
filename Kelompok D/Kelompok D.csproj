@@ -91,6 +91,7 @@
     <Compile Include="AdminPage.Designer.cs">
       <DependentUpon>AdminPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="banksoal.cs" />
     <Compile Include="connection.cs" />
     <Compile Include="EditPeserta.cs">
       <SubType>Form</SubType>
