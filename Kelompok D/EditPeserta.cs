@@ -21,7 +21,6 @@ namespace Kelompok_D
             InitializeComponent();
             this.user = user;
 
-            // Isi kontrol-kontrol dengan data user
             txtNIM.Text = user.Username;
             txtNama.Text = user.Nama;
             dtpTanggal.Value = DateTime.Parse(user.Tanggal);
@@ -45,7 +44,7 @@ namespace Kelompok_D
                 string nim = txtNIM.Text.Trim();
                 string nama = txtNama.Text.Trim();
                 string tanggal = dtpTanggal.Value.ToString("yyyy-MM-dd");
-                string password = lblPassword.Text; // Ambil password dari label
+                string password = lblPassword.Text;
                 string jenisKelamin = rbPria.Checked ? "Pria" : "Wanita";
 
                 // 2. Validasi data
@@ -59,7 +58,7 @@ namespace Kelompok_D
                 using (IDbConnection conn = new SQLiteConnection(Connection.ConnectionString))
                 {
                     conn.Open();
-                    string checkQuery = "SELECT COUNT(*) FROM Users WHERE Username = @NIM AND UserID != @UserID"; // Perhatikan NIM = @NIM
+                    string checkQuery = "SELECT COUNT(*) FROM Users WHERE Username = @NIM AND UserID != @UserID"; 
                     int count = conn.QuerySingle<int>(checkQuery, new { NIM = nim, UserID = user.UserID });
                     if (count > 0)
                     {
@@ -72,7 +71,7 @@ namespace Kelompok_D
                 // 4. Buat objek users untuk update data
                 users updatedUser = new users()
                 {
-                    UserID = user.UserID, // ID user yang akan diupdate
+                    UserID = user.UserID,
                     Username = nim,
                     Nama = nama,
                     Tanggal = tanggal,

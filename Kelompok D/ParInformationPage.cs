@@ -34,7 +34,7 @@ namespace Kelompok_D
             try
             {
                 // 1. Ambil UserID yang sedang login
-                int userID = Home.currentUserID; // Ganti dengan cara Anda mendapatkan UserID
+                int userID = Home.currentUserID; 
 
                 // 2. Query database untuk mengambil data user
                 using (IDbConnection conn = new SQLiteConnection(Connection.ConnectionString))

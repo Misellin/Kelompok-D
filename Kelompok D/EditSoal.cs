@@ -20,7 +20,6 @@ namespace Kelompok_D
             InitializeComponent();
             this.soal = soal;
 
-            // Isi kontrol dengan data soal
             txtTopik.Text = soal.Topik;
             txtSoal.Text = soal.Soal;
             string[] pilihan = soal.Pilihan.Split(';');
@@ -33,7 +32,6 @@ namespace Kelompok_D
             // Centang checkbox jawaban yang benar
             foreach (string jawaban in jawabanBenar)
             {
-                // Cari checkbox yang teksnya sama dengan jawaban
                 if (txtPilihanA.Text == jawaban) chkA.Checked = true;
                 if (txtPilihanB.Text == jawaban) chkB.Checked = true;
                 if (txtPilihanC.Text == jawaban) chkC.Checked = true;
@@ -53,8 +51,8 @@ namespace Kelompok_D
             try
             {
                 // 1. Ambil data dari form
-                string topikLama = soal.Topik; // Simpan topik lama
-                string soalLama = soal.Soal; // Simpan soal lama
+                string topikLama = soal.Topik; 
+                string soalLama = soal.Soal;
 
                 soal.Topik = txtTopik.Text;
                 soal.Soal = txtSoal.Text;
@@ -67,10 +65,10 @@ namespace Kelompok_D
                 if (chkC.Checked) jawaban += txtPilihanC.Text + ";";
                 if (chkD.Checked) jawaban += txtPilihanD.Text + ";";
 
-                // Hapus ; di akhir jawaban (jika ada)
+                // Hapus ; di akhir jawaban
                 soal.Jawaban = jawaban.TrimEnd(';');
 
-                // 2. Validasi data (opsional)
+                // 2. Validasi data
                 if (string.IsNullOrEmpty(soal.Soal) || string.IsNullOrEmpty(soal.Pilihan) || string.IsNullOrEmpty(soal.Jawaban))
                 {
                     MessageBox.Show("Harap isi semua field!");
