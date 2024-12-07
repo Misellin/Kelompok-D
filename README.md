@@ -57,7 +57,7 @@ Ikuti langkah-langkah berikut untuk mengatur proyek ini di komputer Anda:
 ## Catatan Penting  
 - Data yang digunakan telah disimpan di folder **db** dengan filename *OnlineExam*
 - Gunakan akun berikut untuk login sebagai admin:
-  - NIM: **01010101010**
+  - NIM: **123**
   - Password: **admin123**
 
 ---
