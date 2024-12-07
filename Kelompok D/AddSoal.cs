@@ -14,6 +14,7 @@ namespace Kelompok_D
 {
     public partial class AddSoal : Form
     {
+
         public AddSoal()
         {
             InitializeComponent();
@@ -79,18 +80,10 @@ namespace Kelompok_D
 
                 MessageBox.Show("Soal berhasil ditambahkan!");
 
-                // 5. Clear form (opsional)
-                txtTopik.Clear();
-                txtSoal.Clear();
-                txtPilihanA.Clear();
-                txtPilihanB.Clear();
-                txtPilihanC.Clear();
-                txtPilihanD.Clear();
-                chkA.Checked = false;
-                chkB.Checked = false;
-                chkC.Checked = false;
-                chkD.Checked = false;
-                DialogResult = DialogResult.OK;
+                // 5. Clear form 
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+
 
             }
             catch (Exception ex)

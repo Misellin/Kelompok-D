@@ -141,6 +141,7 @@
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(142, 20);
             this.lblPassword.TabIndex = 44;
+            this.lblPassword.Click += new System.EventHandler(this.lblPassword_Click);
             // 
             // panel1
             // 

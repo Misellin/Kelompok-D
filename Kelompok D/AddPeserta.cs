@@ -81,7 +81,7 @@ namespace Kelompok_D
 
         private void btnGeneratePass_Click(object sender, EventArgs e)
         {
-            string password = GenerateRandomPassword();
+            string password = GenerateRandomPassword(16);
 
             lblPassword.Text = password;
         }
@@ -99,6 +99,11 @@ namespace Kelompok_D
         {
             e.Handled = true;
             if (char.IsNumber(e.KeyChar) || e.KeyChar == (char)Keys.Back) e.Handled = false;
+        }
+
+        private void lblPassword_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

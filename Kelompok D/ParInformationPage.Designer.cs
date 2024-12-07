@@ -79,6 +79,8 @@
             this.txtExamDate.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtExamDate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtExamDate.Enabled = false;
+            this.txtExamDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.txtExamDate.ForeColor = System.Drawing.Color.Black;
             this.txtExamDate.Location = new System.Drawing.Point(189, 196);
             this.txtExamDate.Multiline = true;
             this.txtExamDate.Name = "txtExamDate";
@@ -102,6 +104,8 @@
             this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtName.CausesValidation = false;
             this.txtName.Enabled = false;
+            this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.txtName.ForeColor = System.Drawing.Color.Black;
             this.txtName.Location = new System.Drawing.Point(189, 138);
             this.txtName.Multiline = true;
             this.txtName.Name = "txtName";
@@ -125,6 +129,8 @@
             this.txtNIM.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtNIM.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNIM.Enabled = false;
+            this.txtNIM.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.txtNIM.ForeColor = System.Drawing.Color.Black;
             this.txtNIM.Location = new System.Drawing.Point(189, 83);
             this.txtNIM.Multiline = true;
             this.txtNIM.Name = "txtNIM";

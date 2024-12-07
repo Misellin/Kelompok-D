@@ -80,6 +80,17 @@ namespace Kelompok_D
             soal = daftarSoal[currentSoalIndex];
             string tipeSoal = soal.Tipe == 1 ? "Single Choice" : "Multiple Choice";
             label11.Text = $"Question Type: {tipeSoal}, Answers: {soal.Jawaban}";
+            int jumlahJawabanBenar = soal.Jawaban.Split(';').Count(j => !string.IsNullOrEmpty(j));
+
+            if (soal.Tipe == 1)
+            {
+                lblTotalAns.Text = "Select 1 option";
+            }
+            else
+            {
+                lblTotalAns.Text = $"Select a maximum of {jumlahJawabanBenar} options";
+            }
+
 
             if (currentSoalIndex >= 0 && currentSoalIndex < daftarSoal.Count)
             {
@@ -124,7 +135,6 @@ namespace Kelompok_D
                 }
 
                 lblSoalCount.Text = $"{currentSoalIndex + 1}";
-
 
                 if (jawabanUser != null && currentSoalIndex >= 0 && currentSoalIndex < jawabanUser.Count)
                 {
@@ -394,7 +404,7 @@ namespace Kelompok_D
             bool lulus = nilai >= 70;
 
             return new ExamResult(nilai, lulus);
-        }
+            }
 
         public static List<string> NormalizeJawaban(List<string> jawaban)
         {

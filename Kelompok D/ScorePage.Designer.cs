@@ -115,6 +115,7 @@
             this.label4.TabIndex = 21;
             this.label4.Text = "Score :";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label4.Visible = false;
             // 
             // label5
             // 
@@ -127,6 +128,7 @@
             this.label5.TabIndex = 28;
             this.label5.Text = "Pass = 70 or above\r\nFail = below 70";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label5.Visible = false;
             // 
             // panel1
             // 

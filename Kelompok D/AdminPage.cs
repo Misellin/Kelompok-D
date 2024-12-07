@@ -230,7 +230,6 @@ namespace Kelompok_D
                         SELECT 
                             u.Username, 
                             u.Nama, 
-                            u.Tanggal,
                             l.Benar, 
                             l.Salah, 
                             l.Nilai, 
@@ -240,7 +239,7 @@ namespace Kelompok_D
                             laporan l
                         INNER JOIN 
                             Users u ON l.UserID = u.UserID
-                        WHERE 1=1 ";
+                        WHERE 1=1 "; // Trik agar mudah menambahkan filter
 
                     // Tambahkan filter NIM
                     if (!string.IsNullOrEmpty(filterNIM))
@@ -273,6 +272,12 @@ namespace Kelompok_D
 
                     // Tampilkan data di DataGridView
                     dgvLaporan.DataSource = laporan;
+
+                    // Jika tidak ada data yang ditemukan, tampilkan pesan
+                    if (laporan.Count == 0)
+                    {
+                        MessageBox.Show("Data tidak ditemukan.", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
             }
             catch (Exception ex)
@@ -300,7 +305,6 @@ namespace Kelompok_D
                 status = "Fail";
             }
 
-            // Panggil LoadDataLaporan dengan parameter filter
             LoadDataLaporan(nim, nama, status);
         }
 
@@ -373,6 +377,7 @@ namespace Kelompok_D
             addSoal.ShowDialog();
             if (addSoal.ShowDialog() == DialogResult.OK)
             {
+                addSoal.Close();
                 LoadDataSoal(cboTopik.SelectedItem.ToString());
             }
         }
@@ -431,6 +436,16 @@ namespace Kelompok_D
         private void radPassed_CheckedChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            LoadDataSoal(cboTopik.SelectedItem.ToString());
         }
     }
 }

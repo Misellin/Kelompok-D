@@ -61,14 +61,14 @@ namespace Kelompok_D
                         {
                             AdminPage adminPage = new AdminPage();
                             adminPage.Show();
-                            //this.Hide();
+                            this.Hide();
                         }
                         else if (user.Role == "peserta")
                         {
 
                             ParInformationPage parInformationPage = new ParInformationPage();
                             parInformationPage.Show();
-                            //this.Hide();
+                            this.Hide();
                         }
                     }
                     else
@@ -78,7 +78,6 @@ namespace Kelompok_D
                 }
                 txtNIM.Clear();
                 txtPassword.Clear();
-                this.Hide();
             }
         }
         private bool ValidateInput(string nim, string password)
